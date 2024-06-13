@@ -1,0 +1,10 @@
+downloaded/installed RStudio version 2024.04.2+764
+
+https://link.springer.com/article/10.1007/s00477-013-0744-8
+Used Bayesian network to evaluate hydroclimate variables on wq variables
+included probability of exceeding thresholds
+little change in wq due to climate change
+
+Paul et al. 2019
+streamflow is the biggest predictor of water quality
+
