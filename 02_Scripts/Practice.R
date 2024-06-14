@@ -13,7 +13,7 @@ library(jagsUI)
 #also useful for hierarchical models, constraining outcomes, examining the posterior in various ways
 
 #Look at actual data
-data0 <- read.csv("Data/actual data.csv")
+data0 <- read.csv("01_Data/actual data.csv")
 data0 <- data0 %>%
   mutate(date = as.Date(date),
          row = row_number(),
@@ -47,7 +47,7 @@ data0$wq_pred0 <- c(10^pred_wq0)
 data0$wq_pred1 <- c(pred_wq1)
 data0$wq_pred2 <- c(pred_wq2)
 data0$wq_pred3 <- c(pred_wq3)
-data0$wq_pred4 <- c(pred_wq4)
+data0$wq_pred4 <- c(exp(pred_wq4))
 data0$wq_pred5 <- c(1/pred_wq5)
 
 # sim_wq <- simulate(mod0, nsim=1, data=data0) 
@@ -69,16 +69,16 @@ ggplot(data0_long, aes(flow, wq)) +
 #This section is just organizing the flow data
 
 #Additional flow data (past) and future flow
-all_flow <- read.csv("Data/USGS_flow/pH Hillsborough R near Zephyrhills.csv")
+all_flow <- read.csv("01_Data/pH Hillsborough R near Zephyrhills.csv")
 # jason_flow <- read.csv("Data/Jason_flow/Chang data business as usual.csv")
 # jason_flow <- jason_flow %>%
 #   mutate(date = as.Date(date)) #future1 is for some reason missing the very last day
 # NOTE TO SELF: update to use this flow data later
 
-CM3_1 <- read.csv("Data/Old/Hills_CM3_future1.csv")
-CM3_2 <- read.csv("Data/Old/Hills_CM3_future2.csv")
-ESM2G_1 <- read.csv("Data/Old/Hills_ESM2G_future1.csv")
-ESM2G_2 <- read.csv("Data/Old/Hills_ESM2G_future2.csv")
+CM3_1 <- read.csv("01_Data/Hills_CM3_future1.csv")
+CM3_2 <- read.csv("01_Data/Hills_CM3_future2.csv")
+ESM2G_1 <- read.csv("01_Data/Hills_ESM2G_future1.csv")
+ESM2G_2 <- read.csv("01_Data/Hills_ESM2G_future2.csv")
 
 flow_por <- all_flow %>%
   mutate(date = as.Date(Date),
@@ -157,9 +157,9 @@ data_by_day <- flow_por %>%
 data_by_day_obs <- data_by_day %>%
   filter(!is.na(wq))
 
-tmp_jags_code <- "Scripts/tmp_jags_code 2024-02-23.R" #where the jags code file will be written
+tmp_jags_code <- "02_Scripts/tmp_jags_code 2024-06-13.R" #where the jags code file will be written
 tmp_model_obs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data_by_day_obs, file=tmp_jags_code, family=gaussian(link="log"))
-tmp_model_unobs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data_by_day, file=tmp_jags_code, na.action=na.pass)
+#tmp_model_unobs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data_by_day, file=tmp_jags_code, na.action=na.pass)
 #due to probably a bug, I can't run the "unobs" version with family=gaussian(link="log") and na.action=na.pass
 
 #have to change jags file to scat
@@ -170,12 +170,12 @@ tmp_model_unobs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data_by_day, file=
 #params = c("b", "tau", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
 #params = c("b", "tau", "df", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
 params = c("b", "tau", "k", "mu") #b are the parameters, tau is precision, mu is expected values, y is estimated values
-params = c("b", "tau", "k", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
+#params = c("b", "tau", "k", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
 #params = c("b", "tau", "df", "mu") #b are the parameters, tau is precision, mu is expected values, y is estimated values
 #params = c("b", "U", "V", "df", "tau", "mu") #b are the parameters, tau is precision, mu is expected values, y is estimated values
 
 #Run model
-jags_code <- "Scripts/tmp_jags_code_scat3.R" #same for unobs
+jags_code <- "Scripts/tmp_jags_code 2024-06-13_scat.R" #same for unobs
 mod_obs <- jags(model.file = jags_code,
                 parameters.to.save = params,
                 data = tmp_model_obs$jags.data, #makes the design matrix for me?
