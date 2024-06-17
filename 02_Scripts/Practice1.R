@@ -2,6 +2,7 @@ library(tidyverse)
 library(lubridate)
 library(mgcv)
 library(jagsUI)
+library(gratia)
 
 #How does water quality change with streamflow, or streamflow and temperature?
 #What is the probability of water quality exceeding relevant thresholds?
@@ -26,109 +27,42 @@ ggplot(data0, aes(wq)) +
 
 ggplot(data0, aes(flow)) +
   geom_histogram(bins=100) # also looks lognormal
-#I need to log-transform TOC and streamflow, even when using a GAM? maybe not
 
-#Test out GAM
+#Use a GAM to simulate some data
 mod0 <- gam(wq ~ s(log_flow, bs="tp", k=4), family="scat", data=data0)
 
-pred_wq0 <- predict.gam(mod0, newdata=data0)
+pred_mean <- predict.gam(mod0, newdata=data0)
+data0$pred_mean <- c(pred_mean)
 
-data0$wq_pred0 <- c(pred_wq0)
+data_for_sim <- data0 %>%
+  select(log_flow)
 
-# sim_wq <- simulate(mod0, nsim=1, data=data0) 
-# #simulate() gets the predicted values and then randomly draws from their probability distribution, could read docs to find out how
-# data0$wq_pred <- c(pred_wq)
-# data0$wq_sim <- sim_wq[,1]
+sim_wq <- simulate(mod0, nsim=1000, data=data0)
+#simulate() gets the predicted values and then randomly draws from their probability distribution, could read docs to find out how
 
-data0_long <- data0 %>%
-  pivot_longer(cols=c(wq_pred0))
+sim_summary <- data.frame()
+for (i in 1:132) {
+  dat <- sim_wq[i,]
+  sim_05 <- quantile(dat, .01)
+  sim_95 <- quantile(dat, .99)
+  sim_mean <- mean(dat)
+  sim_median <- median(dat)
+  
+  sim_summary_new <- data.frame(sim_05, sim_95, sim_mean, sim_median)
+  sim_summary <- sim_summary %>%
+    bind_rows(sim_summary_new)
+}
 
-ggplot(data0_long, aes(flow, wq)) +
+data1 <- data0 %>%
+  mutate(sim_wq = sim_wq[,1]) %>%
+  bind_cols(sim_summary)
+
+ggplot(data1, aes(flow, wq)) +
   geom_point(shape=1, size=2) +
-  geom_point(data=data0_long, aes(flow, value), color="red") +
-  facet_wrap(~name)
-#Want to use scat with link "identity", not sure if flow should be log-transformed or not
-#don't know why mod2 and mod3 would give different results if identity is the default
-
-################################################################################
-#This section is just organizing the flow data
-
-#Additional flow data (past) and future flow
-all_flow <- read.csv("01_Data/pH Hillsborough R near Zephyrhills.csv")
-# jason_flow <- read.csv("Data/Jason_flow/Chang data business as usual.csv")
-# jason_flow <- jason_flow %>%
-#   mutate(date = as.Date(date)) #future1 is for some reason missing the very last day
-# NOTE TO SELF: update to use this flow data later
-
-CM3_1 <- read.csv("01_Data/Hills_CM3_future1.csv")
-CM3_2 <- read.csv("01_Data/Hills_CM3_future2.csv")
-ESM2G_1 <- read.csv("01_Data/Hills_ESM2G_future1.csv")
-ESM2G_2 <- read.csv("01_Data/Hills_ESM2G_future2.csv")
-
-flow_por <- all_flow %>%
-  mutate(date = as.Date(Date),
-         flow = Q,
-         log_flow = log10(Q)) %>%
-  filter(date>=min(data0$date) & date<=max(data0$date)) %>%
-  select(date, flow, log_flow) %>%
-  left_join(data0) %>% #change to data0 if using full dataset
-  mutate(row = row_number(),
-         day_of_year = yday(date),
-         per="past")
-
-CM3_1a <- CM3_1 %>%
-  mutate(date = seq.Date(from=as.Date("2030-01-01"), to=as.Date("2060-12-29"), by="day")) %>%
-  mutate(flow = X162.36/35.31466621266132,
-         log_flow = log10(flow),
-         wq = NA_real_,
-         log_wq = NA_real_,
-         row = seq(1, 11321),
-         day_of_year = yday(date),
-         per="CM3_1") %>%
-  select(-X162.36)
-
-CM3_2a <- CM3_2 %>%
-  mutate(date = seq.Date(from=as.Date("2070-01-01"), to=as.Date("2100-12-30"), by="day")) %>%
-  mutate(flow = X162.79/35.31466621266132,
-         log_flow = log10(flow),
-         wq = NA_real_,
-         log_wq = NA_real_,
-         row = seq(1, 11321),
-         day_of_year = yday(date),
-         per="CM3_2") %>%
-  select(-X162.79)
-
-ESM2G_1a <- ESM2G_1 %>%
-  mutate(date = seq.Date(from=as.Date("2030-01-01"), to=as.Date("2060-12-29"), by="day")) %>%
-  mutate(flow = X163.97/35.31466621266132,
-         log_flow = log10(flow),
-         wq = NA_real_,
-         log_wq = NA_real_,
-         row = seq(1, 11321),
-         day_of_year = yday(date),
-         per="ESM2G_1") %>%
-  select(-X163.97)
-
-minESM2G_2a <- min(filter(ESM2G_2, X162.28>0))
-ESM2G_2a <- ESM2G_2 %>%
-  mutate(X162.28 = case_when(X162.28==0 ~ minESM2G_2a,
-                             TRUE ~ X162.28)) %>%
-  mutate(date = seq.Date(from=as.Date("2070-01-01"), to=as.Date("2100-12-30"), by="day")) %>%
-  mutate(flow = X162.28/35.31466621266132,
-         log_flow = log10(flow),
-         wq = NA_real_,
-         log_wq = NA_real_,
-         row = seq(1, 11321),
-         day_of_year = yday(date),
-         per="ESM2G_2") %>%
-  select(-X162.28)
-
-data_by_day <- flow_por %>%
-  bind_rows(CM3_1a) %>%
-  bind_rows(CM3_2a) %>%
-  bind_rows(ESM2G_1a) %>%
-  bind_rows(ESM2G_2a) #%>% 
-#mutate(log_flow = round(log_flow, digits=1)) #include if using dataframe with empty values
+  geom_point(data=data1, aes(flow, pred_mean), color="orange") +
+  geom_point(data=data1, aes(flow, sim_wq), color="red") +
+  geom_point(data=data1, aes(flow, sim_mean), color="blue") +
+  geom_errorbar(data=data1, aes(ymin=sim_05, ymax=sim_95))
 
 ################################################################################
 
@@ -139,29 +73,18 @@ data_by_day <- flow_por %>%
 #...but how to make the design matrix? (other than letting jagam do it, I don't know)
 #So, letting jagam make the design matrix
 
-data_by_day_obs <- data_by_day %>%
-  filter(!is.na(wq))
-
-tmp_jags_code <- "02_Scripts/tmp_jags_code 2024-06-13.R" #where the jags code file will be written
-tmp_model_obs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data_by_day_obs, file=tmp_jags_code, family=gaussian(link="log"))
-#tmp_model_unobs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data_by_day, file=tmp_jags_code, na.action=na.pass)
-#due to probably a bug, I can't run the "unobs" version with family=gaussian(link="log") and na.action=na.pass
+tmp_jags_code <- "02_Scripts/tmp_jags_code 2024-06-13 unedited.R" #where the jags code file will be written
+tmp_model_obs <- jagam(wq ~ s(log_flow, bs="tp", k=4), data=data1, file=tmp_jags_code, family=gaussian(link="identity"))
 
 #have to change jags file to scat
 #haven't made any other changes to the default jagam suggestions,
-#except to change NA in unobs to 1/1000 (what jagam recommended when I didn't have missing values of wq)
 
 #Set parameters to monitor
-#params = c("b", "tau", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
-#params = c("b", "tau", "df", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
-params = c("b", "tau", "k", "mu") #b are the parameters, tau is precision, mu is expected values, y is estimated values
-#params = c("b", "tau", "k", "mu", "y") #b are the parameters, tau is precision, mu is expected values, y is estimated values
-#params = c("b", "tau", "df", "mu") #b are the parameters, tau is precision, mu is expected values, y is estimated values
-#params = c("b", "U", "V", "df", "tau", "mu") #b are the parameters, tau is precision, mu is expected values, y is estimated values
+params = c("b", "tau", "k", "mu", "S", "z") #b are the parameters, tau is precision, mu is expected values, y is estimated values
 
 #Run model
-jags_code <- "02_Scripts/tmp_jags_code 2024-06-13_scat.R" #same for unobs
-mod_obs <- jags(model.file = jags_code,
+jags_code <- "02_Scripts/tmp_jags_code 2024-06-13 edited6.R"
+mod1 <- jags(model.file = jags_code,
                 parameters.to.save = params,
                 data = tmp_model_obs$jags.data, #makes the design matrix for me?
                 #inits = tmp_model_obs$jags.ini,
@@ -172,57 +95,91 @@ mod_obs <- jags(model.file = jags_code,
                 n.thin = 25, #interval to thin
                 DIC = TRUE)
 
-#mod$samples and mod$sims.list are the same, just arranged differently
-mcmc_obs <- do.call('rbind', mod_obs$samples)
-#mcmc_unobs <- do.call('rbind', mod_unobs$samples)
+#mod1$samples and mod1$sims.list are the same, just arranged differently
+mcmc <- do.call('rbind', mod1$samples)
 
 #mu ends up the same as using tmp_model$jags.data$X %*% t(mcmc[,1:6])
-#don't know why all the y's are the same
-mcmc_df_obs <- data.frame(mcmc_obs)
-mcmc_obs_longer <- mcmc_df_obs %>%
+#don't know why all the y's are the same, leaving out y's
+mcmc_df <- data.frame(mcmc)
+mcmc_df0 <- mcmc_df[,1:6]
+mcmc_df1 <- mcmc_df[,7:138]
+mcmc_df2 <- mcmc_df[,139:270]
+mcmc_df3 <- mcmc_df[,271:402]
+mcmc_longer1 <- mcmc_df0 %>%
+  bind_cols(mcmc_df1) %>%
   pivot_longer(cols=7:138) %>%
-  mutate(flow = rep(data0$flow, 300))
+  mutate(flow = rep(data0$flow, 300)) %>%
+  mutate(mu = value) %>%
+  select(-name, -value)
+mcmc_longer2 <- mcmc_df0 %>%
+  bind_cols(mcmc_df2) %>%
+  pivot_longer(cols=7:138) %>%
+  mutate(flow = rep(data0$flow, 300)) %>%
+  mutate(S = value) %>%
+  select(-name, -value)
+mcmc_longer3 <- mcmc_df0 %>%
+  bind_cols(mcmc_df3) %>%
+  pivot_longer(cols=7:138) %>%
+  mutate(flow = rep(data0$flow, 300)) %>%
+  mutate(z = value) %>%
+  select(-name, -value)
+mcmc_longer <- mcmc_longer1 %>%
+  mutate(S = mcmc_longer2$S,
+         z = mcmc_longer3$z) %>%
+  mutate(y = z/sqrt(S))
 
-ggplot(data_by_day_obs, aes(flow, wq)) +
-  geom_point(data=mcmc_obs_longer, aes(flow, value)) +
-  geom_point(color='red') +
+mcmc_longer_summary <- mcmc_longer %>%
+  group_by(flow) %>%
+  summarise(y_05 = quantile(y, .05),
+            y_95 = quantile(y, .95),
+            y_50 = quantile(y, .5),
+            y_mean = mean(y))
+
+#7:138 mu
+#139:270 S
+#271:402 z
+
+ggplot(mcmc_longer_summary, aes(flow, y_mean)) +
+  geom_errorbar(data=mcmc_longer_summary, aes(flow, ymin=y_05, ymax=y_95), color="red") +
+  geom_point(color='red') + #modeled wq
+  geom_point(data=data1, aes(flow, wq)) + #original wq
+  geom_point(data=mcmc_longer, aes(flow, mu), color="blue") +
   xlab("Streamflow (cms)") +
   ylab("Total organic carbon (mg/l)") +
   theme_minimal()
-#looks ok!
-rm(mcmc_obs_longer)
+rm(mcmc_longer)
+#mu  are good, but est values see to be systematically too high
 
-##try to estimate y's for obs
-rm(mcmc)
-mcmc <- mcmc_obs
+##try to estimate y's
 res_df <- data.frame()
-n_i <- length(mcmc_df_obs$tau)
-n_j <- length(data0$wq)
-tau_col <- which(colnames(mcmc_df_obs)=="tau")
-k_col <- which(colnames(mcmc_df_obs)=="k")
-i=10
-j=10
-for (i in 1:100) { #n_i) {
+n_i <- length(mcmc_df$tau)
+n_j <- length(data1$wq)
+tau_col <- which(colnames(mcmc_df)=="tau")
+k_col <- which(colnames(mcmc_df)=="k")
+#i=10
+#j=10
+rm(i)
+rm(j)
+for (i in 1:n_i) {
   
   tau_i <- mcmc[i, tau_col]
   k_i <- mcmc[i, k_col]
   
-  for (j in 1:100) { #n_j) {
+  for (j in 1:n_j) {
     
     mu_i_j <- mcmc[i, j+k_col]
-
-    x <- rnorm(1, mu_i_j, tau_i)
-    s <- rgamma(1, k_i/2, k_i/2)
-    y_i_j <- x/sqrt(s)
+    
+    # x <- rnorm(1, mu_i_j, tau_i)
+    # s <- rgamma(1, k_i/2, k_i/2)
+    # y_i_j <- x/sqrt(s)
     
     res_df_new <- data.frame(b1=mcmc[i,1], b2=mcmc[i,2], b3=mcmc[i,3], b4=mcmc[i,4], 
                              tau=tau_i, k=k_i,
-                             flow_orig=data0$flow[j],
-                             yday_orig=data0$yday[j],
-                             #var=var,
+                             flow_orig=data1$flow[j],
+                             yday_orig=data1$yday[j],
                              mu=mu_i_j,
                              y=y_i_j,
-                             wq_orig=data0$wq[j])
+                             wq_orig=data1$wq[j])
     
     res_df <- res_df %>%
       bind_rows(res_df_new)
@@ -230,21 +187,21 @@ for (i in 1:100) { #n_i) {
   }
 }
 
-
-
-res_df1 <- res_df %>% #discards values less than 0, not correct
+res_df1 <- res_df %>%
   group_by(flow_orig, yday_orig, wq_orig) %>%
-  summarise(y_mean = 10^mean(log10(y)),
-            y_05 = 10^quantile(log10(y), .05, na.rm=TRUE),
-            y_95 = 10^quantile(log10(y), .95, na.rm=TRUE),
-            n = n())
+  summarise(y_mean = mean(y),
+            y_median = median(y),
+            y_05 = quantile(y, .05),
+            y_95 = quantile(y, .95))
+  # summarise(y_mean = 10^mean(log10(y)),
+  #           y_05 = 10^quantile(log10(y), .05, na.rm=TRUE),
+  #           y_95 = 10^quantile(log10(y), .95, na.rm=TRUE),
+  #           n = n())
 
-ggplot(res_df1, aes(flow_orig, y_mean)) +
+ggplot(res_df1, aes(flow_orig, wq_orig)) +
   geom_point() +
-  geom_errorbar(aes(ymin=y_05, ymax=y_95)) +
-  geom_point(data=data0, aes(x=flow, y=wq), color="red") +
-  geom_point(data=res_df, aes(flow_orig, mu), color="blue") +
-  scale_y_log10()
+  geom_point(aes(flow_orig, y_mean), color="blue") +
+  geom_errorbar(aes(ymin=y_05, ymax=y_95))
 
 #Should I really be using the log link?
 #Means end up a little high, error bars extending below zero can't be calculated
