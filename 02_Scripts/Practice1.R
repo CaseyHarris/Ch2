@@ -135,11 +135,17 @@ mcmc_longer_summary <- mcmc_longer %>%
             y_50 = quantile(y, .5),
             y_mean = mean(y))
 
+unique(mcmc_longer$flow)
+ggplot(filter(mcmc_longer, y<10000), aes(y, group=flow)) +
+  geom_density()
 #7:138 mu
 #139:270 S
 #271:402 z
 
-ggplot(mcmc_longer_summary, aes(flow, y_mean)) +
+##ask why I simulate ridiculously high values
+##can we control how high it goes
+
+ggplot(mcmc_longer_summary, aes(flow, y_50)) +
   geom_errorbar(data=mcmc_longer_summary, aes(flow, ymin=y_05, ymax=y_95), color="red") +
   geom_point(color='red') + #modeled wq
   geom_point(data=data1, aes(flow, wq)) + #original wq
