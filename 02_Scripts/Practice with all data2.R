@@ -3,71 +3,172 @@ library(gratia)
 library(tidyverse)
 library(jagsUI)
 
+#FLOW DATA
+
+#USGS
+library(dataRetrieval)
+Alaf_flow <- readNWISdv(siteNumbers = "02301500",
+                       parameterCd = "00060")
+Hills_flow <- readNWISdv(siteNumbers = "02303330",
+                              parameterCd = "00060")
+
+Alaf_flow1 <- Alaf_flow %>%
+  mutate(site = "Alafia",
+         Date = as.Date(Date),
+         Q_cfs = X_00060_00003) %>% #cms conversion factor is 35.314666212661
+  select(site, Date, Q_cfs)
+Hills_flow1 <- Hills_flow %>%
+  mutate(site = "Hillsborough",
+         Date = as.Date(Date),
+         Q_cfs = X_00060_00003) %>%
+  select(site, Date, Q_cfs)
+
+#CHANG
+flow_Jason <- read.csv("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Chang data business as usual.csv")
+flow_Jason <- flow_Jason %>%
+  mutate(Date = as.Date(date),
+         Q_cfs = flow)
+
+max(flow_Jason$flow[flow_Jason$site=="Alafia"])
+max(flow_Jason$flow[flow_Jason$site=="Hillsborough" & flow_Jason$Date>=as.Date("1972-07-01") & flow_Jason$Date<=as.Date("2012-12-31")])
+max(Alaf_flow$X_00060_00003)
+max(Hills_flow$X_00060_00003)
+
+#Jason Chang's data and the USGS flow data seem to be in the same units
+#which is cfs (ft3/s)
+#but Chang's min is 0, USGS Alaf is 4, and USGS Hills is 21
+#and Chang's max is 35600 Alaf / 29000 Hills, USGS Alaf is 40800, and USGS Hills is 5710...
+#something not right? (Chang's Hills max 1989-2012 is 18000)
+#Chang's paper used cubic m/s
+
+#use retrospective or the climate model we're talking about to compare time periods
+#nldas would tell us how good the model is
+#ch1 told us about imp. of land management
+#ch2 holds land management const, look at just streamflow
+#could compare years that do overlap
+
+###why is weird stuff happening at low flows
+
+unique(flow_Jason$scenario)
+flow_comp_Chang <- flow_Jason %>%
+  filter(site=="Hillsborough" & scenario=="NLDAS-2_Hargreaves")
+flow_comp_USGS <- Hills_flow1 %>%
+  filter(Date>=as.Date("1989-01-01") & Date<=as.Date("2012-12-13"))
+ggplot(flow_comp_USGS, aes(Date, Q_cfs)) +
+  geom_line() +
+  geom_line(data=flow_comp_Chang, aes(Date, Q_cfs), color="red")
+#I guess NLDAS and USGS are not a great match?
+rm(flow_comp_Chang)
+rm(flow_comp_USGS)
+
+flow_Alaf_Hills <- Alaf_flow1 %>%
+  bind_rows(Hills_flow1) %>%
+  mutate(Q_cfs_log = log(Q_cfs)) %>%
+  mutate(Q_cfs_log_round = round(Q_cfs_log, 1)) %>%
+  mutate(scenario = "USGS") %>%
+  select(site, scenario, Date, Q_cfs, Q_cfs_log, Q_cfs_log_round)
+#logs the values then rounds to the nearest .1
+#-8.1 to 10.6
+
+flow_Jason1 <- flow_Jason %>%
+  mutate(Q_cfs_nonzero = case_when(Q_cfs==0 ~ .0003, #replacing zeros with lowest non-zero flow
+                                   TRUE ~ Q_cfs)) %>%
+  mutate(Q_cfs_log = log(Q_cfs_nonzero)) %>%
+  mutate(Q_cfs_log_round = round(Q_cfs_log, 1)) %>%
+  unique()
+
+full_flow_range <- data.frame("Q_cfs_log_round" = seq(from=-8.1, to=10.6, by=.1))
+full_flow_range <- full_flow_range %>%
+  mutate(Q_cfs_log_round = as.numeric(as.character(Q_cfs_log_round)))
+
 wq_names <- list.files("01_Data/Orig wq and flow/WQ")
-flow_names <- list.files("01_Data/Orig wq and flow/FLOW")
+wq_names_df <- data.frame(wq_names) %>%
+  filter(str_detect(wq_names, "Lithia|Morris"))
+unique(wq_names_df$wq_names)
 
-setdiff(wq_names, flow_names)
-setdiff(flow_names, wq_names)
-
-flow_Jason <- read.csv("01_Data/Chang data business as usual.csv")
-
-summary <- data.frame()
+jags_summary <- data.frame()
+jags_cal_val <- data.frame()
+gam_summary <- data.frame()
+gam_cal_val <- data.frame()
 i = "Alkalinity Alafia R at Lithia.csv"
-for (i in wq_names) {
+for (i in wq_names_df$wq_names) {
   
   title <- gsub(".csv", "", i) #will be plot title
   
   wq <- read.csv(paste0("01_Data/Orig wq and flow/WQ/", i, sep="")) #water quality data
-  flow <- read.csv(paste0("01_Data/Orig wq and flow/FLOW/", i, sep="")) #streamflow data
-  
+
   wq0 <- wq %>%
     mutate(Date = as.Date(Date)) %>%
     select(Date, ConcLow, ConcHigh, ConcAve, Uncen) %>%
     filter(Date>=as.Date("2010-01-01")) #only using 2010 onward so change over time won't be as much of an issue
   
-  flow0 <- flow %>%
-    mutate(Date = as.Date(Date)) %>%
-    select(Date, Q)
+  if (str_detect(title, "Alafia")) {
+    flow0 <- flow_Alaf_Hills %>%
+      filter(site=="Alafia") %>%
+      select(Date, Q_cfs_log_round)
+  } else if (str_detect(title, "Morris")) {
+    flow0 <- flow_Alaf_Hills %>%
+      filter(site=="Hillsborough") %>%
+      select(Date, Q_cfs_log_round)
+  }
   
-  wq_flow0 <- flow0 %>%
-    left_join(wq0) %>%
-    mutate(i = i) %>%
-    filter(Date>=as.Date("2010-01-01")) #only using 2010 onward so change over time won't be as much of an issue
+  wq_flow <- flow0 %>%
+    left_join(wq0, by="Date") %>%
+    select(Q_cfs_log_round, ConcAve) %>%
+    mutate(Q_cfs_log_round = as.numeric(as.character(Q_cfs_log_round))) %>%
+    filter(!is.na(ConcAve))
   
-  summary0 <- wq_flow0 %>%
-    group_by(Uncen) %>%
-    summarise(n = n())
+  setdiff(wq_flow$Q_cfs_log_round, full_flow_range$Q_cfs_log_round)
+  setdiff(full_flow_range$Q_cfs_log_round, wq_flow$Q_cfs_log_round)
   
-  summary1 <- data.frame("i" = i, "Uncen_1" = summary0$n[summary0$Uncen==1 & !is.na(summary0$Uncen)], "WQ_length" = length(wq0$Date))
-  summary <- summary %>%
-    bind_rows(summary1) #this table will show how many of the measurements are censored (below lab detection limit)
-
+  addt_flow <- data.frame("Q_cfs_log_round" =   setdiff(full_flow_range$Q_cfs_log_round, wq_flow$Q_cfs_log_round), "ConcAve"=NA_real_)
+  addt_flow <- addt_flow %>%
+    mutate(Q_cfs_log_round = as.numeric(as.character(Q_cfs_log_round)),
+           ConcAve = as.numeric(as.character(ConcAve)))
+  
+  wq_flow1 <- wq_flow %>%
+    bind_rows(addt_flow) %>%
+    arrange(Q_cfs_log_round, ConcAve) %>%
+    mutate(title = title)
+  
   ##########################################################
   #Bayesian version
-  wq_flow1 <- wq_flow0 %>%
-    mutate(wq_orig = ConcAve,
-           wq_cal = ConcAve) %>%
-    select(i, Date, Q, wq_orig, wq_cal)
+  wq_flow2 <- wq_flow1 %>%
+    mutate(wq_orig = ConcAve) %>%
+    select(title, Q_cfs_log_round, wq_orig)
   
   #Splitting the dataset
-  n <- nrow(wq_flow1)
-  set.seed(59)
-  split <- sample(c(TRUE, FALSE), n, replace=TRUE, prob=c(0.75, 0.25))
+  wq_flow2_unobs_only <- wq_flow2 %>%
+    filter(is.na(wq_orig)) %>%
+    mutate(wq_cal = NA_real_)
   
-  cal <- wq_flow1[split, ]
-  val <- wq_flow1[!split, ]
+  wq_flow2_obs_only <- wq_flow2 %>%
+    filter(!is.na(wq_orig))
+  n_split <- nrow(wq_flow2_obs_only)
+  set.seed(59)
+  split <- sample(c(TRUE, FALSE), n_split, replace=TRUE, prob=c(0.75, 0.25))
+  
+  cal <- wq_flow2_obs_only[split, ]
+  val <- wq_flow2_obs_only[!split, ]
   
   val <- val %>%
-    mutate(wq_cal = NA)
+    mutate(wq_cal = NA_real_)
   
   cal_val_df <- cal %>%
-    bind_rows(val)
+    mutate(wq_cal = wq_orig) %>%
+    bind_rows(val) %>%
+    bind_rows(wq_flow2_unobs_only) %>%
+    arrange(Q_cfs_log_round, wq_orig)
+  
+  #summary_new <- data.frame("i"=title, )
+  #summarise n obs, max/min obs, censored)
+  #how to get rid of all the attributes?
   
   tmp_jags_code <- "02_Scripts/tmp_jags_code 2024-08-02 unedited.R" #where the jags code file will be written
   set.seed(90)
-  tmp_model_obs_des <- jagam(wq_cal ~ s(Q, bs="tp", k=4), data=cal_val_df, file=tmp_jags_code, family=gaussian, na.action=na.pass) #gives me the design matrix I need
+  tmp_model_obs_des <- jagam(wq_cal ~ s(Q_cfs_log_round, bs="tp", k=4), data=cal_val_df, file=tmp_jags_code, family=gaussian, na.action=na.pass) #gives me the design matrix I need
   set.seed(90)
-  tmp_model_obs <- jagam(wq_cal ~ s(Q, bs="tp", k=4), data=cal_val_df, file=tmp_jags_code, family=Gamma(link="log")) #give me the jags script I need
+  tmp_model_obs <- jagam(wq_cal ~ s(Q_cfs_log_round, bs="tp", k=4), data=cal_val_df, file=tmp_jags_code, family=Gamma(link="log")) #give me the jags script I need
   #design matrices for tmp_model_obs and tmp_model_des are identical with na.action=na.omit,
   #but when I use na.pass it differs slightly (why?)
   own_design_matrix <- tmp_model_obs_des$jags.data
@@ -82,6 +183,7 @@ for (i in wq_names) {
   #b are the GAM parameters, eta is needed for the log link, mu is expected values of mean water quality, 
   #r and scale describe the gamma distribution
   #y is response values of water quality
+  #how can I include Q_cfs_log_round in output?
 
   #Run model
   jags_code <- "02_Scripts/tmp_jags_code 2024-08-02 unedited.R"
@@ -104,38 +206,38 @@ for (i in wq_names) {
   # test <- exp(test) #mu values
   # then do below to get y values
   
-  n_obs <- length(cal_val_df$Date)
+  n_flows <- length(cal_val_df$Q_cfs_log_round)
   mcmc_df <- data.frame(mcmc)
   mcmc_df0 <- mcmc_df[,1:4] #b
-  mcmc_df1 <- mcmc_df[,5:(n_obs+4)] #eta
-  mcmc_df2 <- mcmc_df[,(n_obs+5):(n_obs*2+4)] #mu
-  mcmc_df3 <- mcmc_df[,n_obs*2+5] #r
-  mcmc_df4 <- mcmc_df[,n_obs*2+6] #scale
-  #mcmc_df5 <- mcmc_df[,(n_obs*2+7):(n_obs*3+6)] #y_est  
+  mcmc_df1 <- mcmc_df[,5:(n_flows+4)] #eta
+  mcmc_df2 <- mcmc_df[,(n_flows+5):(n_flows*2+4)] #mu
+  mcmc_df3 <- mcmc_df[,n_flows*2+5] #r
+  mcmc_df4 <- mcmc_df[,n_flows*2+6] #scale
+  #mcmc_df5 <- mcmc_df[,(n_flows*2+7):(n_flows*3+6)] #y_est  
   
   #Rearranging the posterior
   mcmc_longer1 <- mcmc_df0 %>%
     mutate(r = mcmc_df3,
            scale = mcmc_df4) %>%
     bind_cols(mcmc_df1) %>%
-    pivot_longer(cols=7:(n_obs+6)) %>%
-    mutate(flow = rep(cal_val_df$Q, 300)) %>%
+    pivot_longer(cols=7:(n_flows+6)) %>%
+    mutate(Q_cfs_log_round = rep(cal_val_df$Q_cfs_log_round, 300)) %>% #would rather have mcmc put Q in the output
     mutate(eta = value) %>%
     select(-name, -value)
   mcmc_longer2 <- mcmc_df0 %>%
     mutate(r = mcmc_df3,
            scale = mcmc_df4) %>%
     bind_cols(mcmc_df2) %>%
-    pivot_longer(cols=7:(n_obs+6)) %>%
-    mutate(flow = rep(cal_val_df$Q, 300)) %>%
+    pivot_longer(cols=7:(n_flows+6)) %>%
+    mutate(Q_cfs_log_round = rep(cal_val_df$Q_cfs_log_round, 300)) %>% #would rather have mcmc put Q in the output
     mutate(mu = value) %>%
     select(-name, -value)
   # mcmc_longer3 <- mcmc_df0 %>%
   #   mutate(r = mcmc_df3,
   #          scale = mcmc_df4) %>%
   #   bind_cols(mcmc_df5) %>%
-  #   pivot_longer(cols=7:(n_obs+6)) %>%
-  #   mutate(flow = rep(cal1$Q, 300)) %>%
+  #   pivot_longer(cols=7:(n_flows+6)) %>%
+  #   mutate(Q_cfs_log_round = rep(cal_val_df$Q_cfs_log_round, 300)) %>% #would rather have mcmc put Q in the output
   #   mutate(y_est = value) %>%
   #   select(-name, -value)
     
@@ -151,58 +253,101 @@ for (i in wq_names) {
     set.seed(k)
     y = rgamma(1, mcmc_longer$r[k], mcmc_longer$r[k]/mcmc_longer$mu[k])
     mcmc_longer$y[k] <- y
-    
-    rem <- k%%100000
-    if (rem==0) {
-      write.csv(mcmc_longer, "01_Data/mcmc results.csv", row.names=FALSE)
-    }
 
   } # seems like a fine way to get y's, but I wouldn't do this if my y's were working in JAGS
-  #takes a long time for bigger datasets (~30 minutes for 10 years of flow data)
 
   #Getting 95% credible intervals
-  mcmc_longer_res <- mcmc_longer %>%
-    mutate(label = as.character(rep(1:n_obs, 300)))
-  
-  mcmc_summary <- mcmc_longer_res %>%
-    group_by(label, flow) %>%
+  mcmc_summary <- mcmc_longer %>%
+    group_by(Q_cfs_log_round) %>%
     summarise(mu_mean = mean(mu),
               mu_025 = quantile(mu, .025),
               mu_975 = quantile(mu, .975),
               y_mean = mean(y),
               y_025 = quantile(y, .025),
-              y_975 = quantile(y, .975)) 
+              y_975 = quantile(y, .975)) %>%
+    ungroup() %>%
+    mutate(title = title) 
   
-  cal_val_df <- cal_val_df %>%
-    mutate(label = as.character(1:n_obs)) %>%
-    mutate(cal_or_val = case_when(!is.na(wq) ~ "Model calibration",
-                                  is.na(wq) ~ "Model validation",
-                                  TRUE ~ NA_character_))
+  cal_val_est <- cal_val_df %>%
+    mutate(Q_cfs_log_round = as.numeric(as.character(Q_cfs_log_round))) %>%
+    mutate(y_est_100 = mcmc_longer[((100*n_flows)+1):(101*n_flows),10]$y) %>% #the 100th simulation, could choose anything
+    mutate(cal_or_val = case_when(!is.na(wq_cal) ~ "Model calibration",
+                                !is.na(wq_orig) & is.na(wq_cal) ~ "Model validation",
+                                TRUE ~ "neither")) 
+ 
+  max_flow_sampled <- max(cal_val_est$Q_cfs_log_round[!is.na(cal_val_est$wq_orig)])
+  min_flow_sampled <- min(cal_val_est$Q_cfs_log_round[!is.na(cal_val_est$wq_orig)])
   
+  cal_val_est <- cal_val_est %>%
+    mutate(method = "JAGS",
+           max_flow_sampled = max_flow_sampled,
+           min_flow_sampled = min_flow_sampled)
+    
   mcmc_summary1 <- mcmc_summary %>%
-    left_join(cal_val_df, by="label")
+    mutate(in_or_out = case_when(Q_cfs_log_round<min_flow_sampled | Q_cfs_log_round>max_flow_sampled ~ "OOR",
+                                 Q_cfs_log_round>=min_flow_sampled & Q_cfs_log_round<=max_flow_sampled ~ "in range",
+                                 TRUE ~ NA)) %>%
+    mutate(method = "JAGS",
+           max_flow_sampled = max_flow_sampled,
+           min_flow_sampled = min_flow_sampled)
   
-  mcmc_longer_res1 <- mcmc_longer_res %>%
-    left_join(cal_val_df, by="label") %>%
-    mutate(flow = Q)
+  jags_cal_val <- jags_cal_val %>%
+    bind_rows(cal_val_est)
   
-  mcmc_plot <- mcmc_longer_res1[((100*length(cal_val_df$wq)+1)):(101*length(cal_val_df$wq)),] #the 100th simulation, could choose anything
+  jags_summary <- jags_summary %>%
+    bind_rows(mcmc_summary1)
   
-  ggplot(mcmc_summary1, aes(flow, wq_orig, color=cal_or_val)) +
-    geom_line(aes(flow, y_025)) +
-    geom_line(aes(flow, y_975)) +
-    geom_line(aes(flow, mu_mean), linetype="dashed") +
-    geom_line(aes(flow, mu_025)) +
-    geom_line(aes(flow, mu_975)) +
-    geom_point(data=mcmc_plot, aes(flow, y), shape=1) +
-    geom_point(shape=1, aes(color="Observed values")) +
+  #NSE=1 perfect model, NSE=0 as good as using the mean, NSE<0 worse than using the mean
+  a = cal_val_est[cal_val_est$cal_or_val=="Model validation",]$wq_orig
+  b = cal_val_est[cal_val_est$cal_or_val=="Model validation",]$y_est_100
+  nse_bayes <- 1 - (sum((a - b)^2) / sum((a - mean(a))^2))
+  nse_bayes_alt <- 1 - (sum(abs(a - b)) / sum(abs(a - mean(a))))
+  #alt version may be less sensitive to outliers
+  #there's probably a better way to calculate this (average NSE?), this uses only one set of simulated values
+  
+  #Plot shows in range only (labels provide min/max)
+  #mean/error bars based on calibration dataset
+  #original values
+  #estimated values
+  ggplot(filter(mcmc_summary1, in_or_out=="in range")) +
+    geom_line(aes(exp(Q_cfs_log_round), y_025)) +
+    geom_line(aes(exp(Q_cfs_log_round), y_975)) +
+    geom_line(aes(exp(Q_cfs_log_round), mu_mean), linetype="dashed") +
+    geom_line(aes(exp(Q_cfs_log_round), mu_025)) +
+    geom_line(aes(exp(Q_cfs_log_round), mu_975)) +
+    geom_point(data=filter(cal_val_est, cal_or_val!="neither"), aes(exp(Q_cfs_log_round), wq_orig, color="Measured"), shape=1) +
+    geom_point(data=filter(cal_val_est, cal_or_val!="neither"), aes(exp(Q_cfs_log_round), y_est_100, color="Simulated"), shape=1) +
     ggtitle(paste0("JAGS version: ", title, sep="")) +
     ylab("Water quality (units)") +
-    xlab("Flow (m^3/s)") +
-    scale_color_manual(values=c("Model calibration"="green", "Model validation"="red", "Observed values"="black")) +
+    xlab("Flow (ft^3/s)") +
+    scale_color_manual(values=c("Measured"="green", "Simulated"="black")) +
     theme_bw() +
     theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
-  ggsave(paste0("01_Data/Orig wq and flow/Initial C-D relationships/", title, " jags.png", sep=""), width=6, height=3.75)
+  ggsave(paste0("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Figures/Initial C-D relationships/", title, " jags.png", sep=""), width=6, height=3.75)
+  
+  #XY plot for orig/calib and orig/valid
+  ggplot(filter(cal_val_est, cal_or_val!="neither"), aes(wq_orig, y_est_100, color=cal_or_val)) +
+    geom_point(shape=1) + 
+    geom_abline(aes(slope=1, intercept=0), linetype="dashed") +
+    ggtitle(paste0("JAGS version: ", title, sep=""), subtitle=paste0("NSE = ", round(nse_bayes, 2), " and NSE_alt = ", round(nse_bayes_alt, 2), sep="")) +
+    ylab("Simulated water quality") +
+    xlab("Observed water quality") +
+    scale_color_manual(values=c("Model calibration"="blue", "Model validation"="red")) +
+    theme_bw() +
+    theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), plot.subtitle=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
+  ggsave(paste0("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Figures/Initial C-D relationships/", title, " jags nse.png", sep=""), width=6, height=3.75)
+
+  ggplot(cal_val_est, aes(exp(Q_cfs_log_round), wq_orig)) +
+    geom_point(shape=1, aes(color="Measured")) +
+    geom_point(aes(exp(Q_cfs_log_round), y_est_100, color="Simulated"), shape=1) +
+    ggtitle(paste0("JAGS version ALL flows: ", title, sep="")) +
+    ylab("Water quality") +
+    xlab("Observed water quality") +
+    scale_color_manual(values=c("Simulated"="black", 
+                                "Measured"="green")) +
+    theme_bw() +
+    theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), plot.subtitle=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
+  ggsave(paste0("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Figures/Initial C-D relationships/", title, " jags ALL.png", sep=""), width=6, height=3.75)
   
   # #modifying the code to use rjags and then 
   # #using coda() or coda.samples() might help me get estimated y values
@@ -220,35 +365,23 @@ for (i in wq_names) {
   # pred_y <- predict(jam, newdata=val) #gives me eta values?
   # 
   # mcmc_longer$wq_obs <- rep(cal$wq, 300) #make sure order is not messed up or join more carefully
-  
-  #NSE=1 perfect model, NSE=0 as good as using the mean, NSE<0 worse than using the mean
-  nse_bayes <- 1 - (sum((mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$wq_orig - mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$y_est)^2) / sum((mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$wq_orig - mean(mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$y_est))^2))
-  nse_bayes_alt <- 1 - (sum(abs(mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$wq_orig - mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$y_est)) / sum(abs(mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$wq_orig - mean(mcmc_plot[mcmc_plot$cal_or_val=="Model validation",]$y_est))))
-  #alt version may be less sensitive to outliers
-  
-  ggplot(mcmc_plot, aes(wq_orig, y_est, color=cal_or_val)) +
-    geom_point(shape=1) + 
-    geom_abline(aes(slope=1, intercept=0), linetype="dashed") +
-    ggtitle(paste0("JAGS version: ", title, sep=""), subtitle=paste0("NSE = ", round(nse_bayes, 2), " and NSE_alt = ", round(nse_bayes_alt, 2), sep="")) +
-    ylab("Simulated water quality") +
-    xlab("Observed water quality") +
-    scale_color_manual(values=c("Model calibration"="green", "Model validation"="red")) +
-    theme_bw() +
-    theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), plot.subtitle=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
-  ggsave(paste0("01_Data/Orig wq and flow/Initial C-D relationships/", title, " jags nse.png", sep=""), width=6, height=3.75)
-  
+
   #GAM only version
-  mod_gam <- gam(wq ~ s(Q, bs="tp", k=4), family=Gamma(link="log"), data=cal_val_df)
+  mod_gam <- gam(wq_cal ~ s(Q_cfs_log_round, bs="tp", k=4), family=Gamma(link="log"), data=cal_val_df)
   
   pred_mean <- predict.gam(mod_gam, newdata=cal_val_df)
   cal_val_df$pred_mean <- c(pred_mean)
   
-  sim_wq <- simulate(mod_gam, nsim=1000, data=cal_val_df)
+  cal_val_df_unique <- cal_val_df %>%
+    select(Q_cfs_log_round) %>%
+    unique()
+  
+  sim_wq <- simulate(mod_gam, nsim=300, data=cal_val_df_unique)
   #simulate() gets the predicted values and then randomly draws from their probability distribution
   
   j=1
+  n_obs_gam <- length(cal_val_df_unique$Q_cfs_log_round)
   sim_summary <- data.frame()
-  n_obs_gam = length(cal_val_df$Date)
   for (j in 1:n_obs_gam) {
     dat <- sim_wq[j,]
     sim_low <- quantile(dat, .025)
@@ -263,37 +396,79 @@ for (i in wq_names) {
     
   }
 
-  sim_summary <- sim_summary %>%
-    bind_cols(cal_val_df)
+  sim_summary1 <- sim_summary %>%
+    bind_cols(cal_val_df_unique) %>%
+    mutate(in_or_out = case_when(Q_cfs_log_round<min_flow_sampled | Q_cfs_log_round>max_flow_sampled ~ "OOR",
+                                 Q_cfs_log_round>=min_flow_sampled & Q_cfs_log_round<=max_flow_sampled ~ "in range",
+                                 TRUE ~ NA)) %>%
+    mutate(method = "GAM",
+           max_flow_sampled = max_flow_sampled,
+           min_flow_sampled = min_flow_sampled)
+  
+  sim_wq_cal_val <- simulate(mod_gam, nsim=300, data=cal_val_df)
+  
+  cal_val_gam <- cal_val_df %>%
+    mutate(y_gam_100 = sim_wq_cal_val[,100]) %>%
+    mutate(cal_or_val = case_when(!is.na(wq_cal) ~ "Model calibration",
+                                  !is.na(wq_orig) & is.na(wq_cal) ~ "Model validation",
+                                  TRUE ~ "neither")) %>%
+    mutate(method = "GAM",
+         max_flow_sampled = max_flow_sampled,
+         min_flow_sampled = min_flow_sampled)
+  
+  gam_cal_val <- gam_cal_val %>%
+    bind_rows(cal_val_gam)
+  
+  gam_summary <- gam_summary %>%
+    bind_rows(sim_summary1)
 
-  ggplot(sim_summary, aes(Q, wq_orig, color=cal_or_val)) +
-    geom_point(shape=1, aes(color="Observed values")) + 
-    geom_line(aes(Q, sim_low)) +
-    geom_line(aes(Q, sim_high)) +
-    geom_line(aes(Q, sim_mean), linetype="dashed") +
-    geom_point(shape=1, aes(Q, sim_val)) +
+  ggplot(filter(sim_summary1, in_or_out=="in range")) +
+    geom_line(aes(exp(Q_cfs_log_round), sim_low)) +
+    geom_line(aes(exp(Q_cfs_log_round), sim_high)) +
+    geom_line(aes(exp(Q_cfs_log_round), sim_mean), linetype="dashed") +
+    geom_point(data=filter(cal_val_gam, cal_or_val!="neither"), aes(exp(Q_cfs_log_round), wq_orig, color="Measured"), shape=1) +
+    geom_point(data=filter(cal_val_gam, cal_or_val!="neither"), aes(exp(Q_cfs_log_round), y_gam_100, color="Simulated"), shape=1) +
     ggtitle(paste0("GAM version: ", title, sep="")) +
     ylab("Water quality (units)") +
-    xlab("Flow (m^3/s)") +
+    xlab("Flow (ft^3/s)") +
     theme_bw() +
-    scale_color_manual(values=c("Model calibration"="green", "Model validation"="red", 
-                       "Observed values"="black")) +
+    scale_color_manual(values=c("Simulated"="black", 
+                       "Measured"="green")) +
     theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), plot.subtitle=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
-  ggsave(paste0("01_Data/Orig wq and flow/Initial C-D relationships/", title, " gam.png", sep=""), width=6, height=3.75)
+  ggsave(paste0("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Figures/Initial C-D relationships/", title, " gam.png", sep=""), width=6, height=3.75)
   
-  nse <- 1 - (sum((sim_summary$wq_orig - sim_summary$sim_val)^2) / sum((sim_summary$wq_orig - mean(sim_summary$wq_orig))^2)) 
-  nse_alt <- 1 - (sum(abs(sim_summary$wq_orig - sim_summary$sim_val)) / sum(abs(sim_summary$wq_orig - mean(sim_summary$wq_orig))))
-  #there's probably a better way to calculate this (average NSE?), this uses only one set of simulated values
+  a = cal_val_gam[cal_val_gam$cal_or_val=="Model validation",]$wq_orig
+  b = cal_val_gam[cal_val_gam$cal_or_val=="Model validation",]$y_gam_100
+  nse_gam <- 1 - (sum((a - b)^2) / sum((a - mean(a))^2))
+  nse_gam_alt <- 1 - (sum(abs(a - b)) / sum(abs(a - mean(a))))
   
-  ggplot(sim_summary, aes(wq_orig, sim_val, color=cal_or_val)) +
+  ggplot(filter(cal_val_gam, cal_or_val!="neither"), aes(wq_orig, y_gam_100, color=cal_or_val)) +
     geom_point(shape=1) + 
     geom_abline(slope=1, intercept=0, linetype="dashed") +
-    ggtitle(paste0("GAM version: ", title, sep=""), subtitle=paste0("NSE = ", round(nse, 2), " and NSE_alt = ", round(nse_alt, 2), sep="")) +
-    ylab("Observed water quality") +
-    xlab("Simulated water quality") +
-    scale_color_manual(values=c("Model calibration"="green", "Model validation"="red")) +
+    ggtitle(paste0("GAM version: ", title, sep=""), subtitle=paste0("NSE = ", round(nse_gam, 2), " and NSE_alt = ", round(nse_gam_alt, 2), sep="")) +
+    ylab("Simulated water quality") +
+    xlab("Observed water quality") +
+    scale_color_manual(values=c("Model calibration"="blue", "Model validation"="red")) +
     theme_bw() +
     theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), plot.subtitle=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
-  ggsave(paste0("01_Data/Orig wq and flow/Initial C-D relationships/", title, " gam nse.png", sep=""), width=6, height=3.75)
+  ggsave(paste0("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Figures/Initial C-D relationships/", title, " gam nse.png", sep=""), width=6, height=3.75)
+  
+  ggplot(cal_val_gam, aes(exp(Q_cfs_log_round), wq_orig)) +
+    geom_point(shape=1, aes(color="Measured")) +
+    geom_point(aes(exp(Q_cfs_log_round), y_gam_100, color="Simulated"), shape=1) +
+    ggtitle(paste0("GAM version ALL flows: ", title, sep="")) +
+    ylab("Water quality") +
+    xlab("Observed water quality") +
+    scale_color_manual(values=c("Simulated"="black", 
+                                "Measured"="green")) +
+    theme_bw() +
+    theme(legend.title=element_blank(), legend.position="right", legend.text=element_text(size=10), plot.title=element_text(size=10), plot.subtitle=element_text(size=10), axis.title=element_text(size=10), axis.text=element_text(size=10))
+  ggsave(paste0("C:/Users/cshar/OneDrive/UF Personal/Ch2/Large files/Figures/Initial C-D relationships/", title, " gam ALL.png", sep=""), width=6, height=3.75)
+ 
+  write.csv(jags_cal_val, "JAGS cal val.csv", row.names=FALSE)
+  write.csv(gam_cal_val, "GAM cal val.csv", row.names=FALSE)
+  write.csv(jags_summary, "JAGS summary.csv", row.names=FALSE)
+  write.csv(gam_summary, "GAM summary.csv", row.names=FALSE)
   
 }
+
