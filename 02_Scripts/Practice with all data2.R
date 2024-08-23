@@ -47,7 +47,7 @@ max(Hills_flow$X_00060_00003)
 #ch2 holds land management const, look at just streamflow
 #could compare years that do overlap
 
-###why is weird stuff happening at low flows
+#why is weird stuff happening at low flows
 
 unique(flow_Jason$scenario)
 flow_comp_Chang <- flow_Jason %>%
@@ -67,6 +67,7 @@ flow_Alaf_Hills <- Alaf_flow1 %>%
   mutate(Q_cfs_log_round = round(Q_cfs_log, 1)) %>%
   mutate(scenario = "USGS") %>%
   select(site, scenario, Date, Q_cfs, Q_cfs_log, Q_cfs_log_round)
+write.csv(flow_Alaf_Hills, "flow_Alaf_Hills.csv", row.names=FALSE)
 #logs the values then rounds to the nearest .1
 #-8.1 to 10.6
 
@@ -76,6 +77,7 @@ flow_Jason1 <- flow_Jason %>%
   mutate(Q_cfs_log = log(Q_cfs_nonzero)) %>%
   mutate(Q_cfs_log_round = round(Q_cfs_log, 1)) %>%
   unique()
+write.csv(flow_Jason1, "flow_Jason1.csv", row.names=FALSE)
 
 full_flow_range <- data.frame("Q_cfs_log_round" = seq(from=-8.1, to=10.6, by=.1))
 full_flow_range <- full_flow_range %>%
