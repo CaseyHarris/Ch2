@@ -2,6 +2,7 @@ library(mgcv)
 #library(gratia)
 library(tidyverse)
 library(jagsUI)
+library(data.table)
 
 #use retrospective or the climate model we're talking about to compare time periods
 #nldas would tell us how good the model is
@@ -10,23 +11,38 @@ library(jagsUI)
 #could compare years that do overlap
 
 flow_Alaf_Hills <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Alaf_Hills.csv")
+#flow_Alaf_Hills <- read.csv("/blue/carpena/caseyharris/Ch2/flow_Alaf_Hills.csv")
 flow_Jason1 <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Jason1.csv")
+#flow_Jason1 <- read.csv("/blue/carpena/caseyharris/Ch2/flow_Jason1.csv")
 
 full_flow_range <- read.csv("01_Data/full_flow_range.csv")
+#full_flow_range <- read.csv("/blue/carpena/caseyharris/Ch2/full_flow_range.csv")
 unique(full_flow_range$Q_cfs_log_round)
 
 wq_names <- list.files("01_Data/Orig wq and flow/WQ")
+#wq_names <- list.files("/blue/carpena/caseyharris/Ch2/WQ")
 wq_names <- data.frame(wq_names) %>%
   filter(str_detect(wq_names, "Lithia|Morris")) %>%
   filter(!str_detect(wq_names, "Temperature|Organic nitrogen|Chloride"))
 unique(wq_names$wq_names)
 
+stopCluster(cl = cluster)
 library(foreach)
 library(doParallel)
-n_cores <- detectCores()
+n_cores <- detectCores(logical=FALSE)
 n_cores
-cluster <- makeCluster(n_cores - 8)
+cluster <- makeCluster(12)
 registerDoParallel(cluster)
+
+# library(parallel)
+# cl <- makePSOCKcluster(6)
+# setDefaultCluster(cl)
+# adder <- function(a, b) a + b #???
+# clusterExport(NULL, c('adder'))
+# clusterEvalQ(NULL, library(tidyverse)) #???
+# parLapply(NULL, 1:8, function(z) adder(z, 100)) #???
+
+#how can I be sure that foreach is not trying to access the same jags info while working
 
 i=1
 foreach(i = 1:length(wq_names$wq_names),
@@ -36,7 +52,8 @@ foreach(i = 1:length(wq_names$wq_names),
   title <- gsub(".csv", "", wq_names$wq_names[i])
   
   wq <- read.csv(paste("01_Data/Orig wq and flow/WQ/", title, ".csv", sep="")) #water quality data
-
+  #wq <- read.csv(paste("/blue/carpena/caseyharris/Ch2/WQ/", title, ".csv", sep="")) #water quality data
+  
   wq0 <- wq %>%
     mutate(Date = as.Date(Date)) %>%
     select(Date, ConcLow, ConcHigh, ConcAve, Uncen) %>%
@@ -102,7 +119,8 @@ foreach(i = 1:length(wq_names$wq_names),
       bind_rows(wq_flow2_unobs_only) %>%
       arrange(Q_cfs_log_round, wq_orig)
     
-    tmp_jags_code <- "02_Scripts/tmp_jags_code 2024-08-02 unedited.R" #where the jags code file will be written
+    tmp_jags_code <- paste("02_Scripts/tmp_jags_code 2024-08-02 unedited ", title, ".R", sep="") #where the jags code file will be written
+    #tmp_jags_code <- paste("/blue/carpena/caseyharris/Ch2/JAGS/tmp_jags_code 2024-08-02 unedited ", title, ".R", sep="") #where the jags code file will be written
     set.seed(a*i)
     tmp_model_obs_des <- jagam(wq_cal ~ s(Q_cfs_log_round, bs="tp", k=4), data=cal_val_df, file=tmp_jags_code, family=gaussian, na.action=na.pass) #gives me the design matrix I need
     set.seed(a*i)
@@ -124,7 +142,8 @@ foreach(i = 1:length(wq_names$wq_names),
     #how can I include Q_cfs_log_round in output?
     
     #Run model
-    jags_code <- "02_Scripts/tmp_jags_code 2024-08-02 unedited.R"
+    jags_code <- paste("02_Scripts/tmp_jags_code 2024-08-02 unedited ", title, ".R", sep="")
+    #jags_code <- paste("/blue/carpena/caseyharris/Ch2/JAGS/tmp_jags_code 2024-08-02 unedited ", title, ".R", sep="")
     set.seed(a*i)
     mod1 <- jags(model.file = jags_code,
                  parameters.to.save = params,
@@ -147,9 +166,10 @@ foreach(i = 1:length(wq_names$wq_names),
     n_flows <- length(cal_val_df$Q_cfs_log_round)
     mcmc_df <- data.frame(mcmc)
     mcmc_df0 <- mcmc_df[,1:n_flows] #mu
-    mcmc_df1 <- mcmc_df[,1:n_flows+1] #r
+    mcmc_df1 <- mcmc_df[,n_flows+1] #r
 
-    mcmc_save_jags <- data.frame("title"=title, "split"=a, "r"=mcmc_df1, mcmc_df0)
+    mcmc_save_jags <- data.frame("split"=a, "r"=mcmc_df1, mcmc_df0)
+    mcmc_save_jags <- as.data.table(mcmc_save_jags)
     
     cal_val_jags <- cal_val_df %>%
       mutate(cal_val = case_when(!is.na(wq_cal) & !is.na(wq_orig) ~ "cal",
@@ -157,13 +177,18 @@ foreach(i = 1:length(wq_names$wq_names),
                                  TRUE ~ "neither"),
              split = a) %>%
       select(title, Q_cfs_log_round, wq_orig, cal_val, split)
+    cal_val_jags <- as.data.table(cal_val_jags)
     
     if (a==1) {
-      write.csv(mcmc_save_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/MCMC JAGS/", title, ".csv", sep=""), row.names=FALSE)
-      write.csv(cal_val_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Cal_val JAGS/", title, ".csv", sep=""), row.names=FALSE)
+      write.table(mcmc_save_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/MCMC/", title, ".csv", sep=""), row.names=FALSE)
+      #write.table(mcmc_save_jags, paste("/blue/carpena/caseyharris/Ch2/JAGS/MCMC/", title, ".csv", sep=""), row.names=FALSE)
+      write.table(cal_val_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Cal_val/", title, ".csv", sep=""), row.names=FALSE)
+      #write.table(cal_val_jags, paste("/blue/carpena/caseyharris/Ch2/JAGS/Cal_val/", title, ".csv", sep=""), row.names=FALSE)
     } else {
-      write.table(mcmc_save_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/MCMC JAGS/", title, ".csv", sep=""), row.names=FALSE, append=TRUE)
-      write.table(cal_val_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Cal_val JAGS/", title, ".csv", sep=""), row.names=FALSE, append=TRUE)
+      write.table(mcmc_save_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/MCMC/", title, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
+      #write.table(mcmc_save_jags, paste("/blue/carpena/caseyharris/Ch2/JAGS/MCMC/", title, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
+      write.table(cal_val_jags, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Cal_val/", title, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
+      #write.table(cal_val_jags, paste("/blue/carpena/caseyharris/Ch2/JAGS/Cal_val/", title, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
     }
 
     rm(mcmc)

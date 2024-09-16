@@ -1,349 +1,349 @@
-"title","name","value"
-"Alkalinity Alafia R at Lithia","max_flow_ever",10.6
-"Alkalinity Alafia R at Lithia","min_flow_ever",1.4
-"Alkalinity Alafia R at Lithia","max_flow_2010",9
-"Alkalinity Alafia R at Lithia","min_flow_2010",1.6
-"Alkalinity Alafia R at Lithia","max_wq_ever",172
-"Alkalinity Alafia R at Lithia","min_wq_ever",33
-"Alkalinity Alafia R at Lithia","max_wq_2010",172
-"Alkalinity Alafia R at Lithia","min_wq_2010",34
-"Alkalinity Alafia R at Lithia","max_flow_wq_ever",8.4
-"Alkalinity Alafia R at Lithia","min_flow_wq_ever",1.5
-"Alkalinity Alafia R at Lithia","max_flow_wq_2010",8.1
-"Alkalinity Alafia R at Lithia","min_flow_wq_2010",2.5
-"Chloride Alafia R at Lithia","max_flow_ever",10.6
-"Chloride Alafia R at Lithia","min_flow_ever",1.4
-"Chloride Alafia R at Lithia","max_flow_2010",9
-"Chloride Alafia R at Lithia","min_flow_2010",1.6
-"Chloride Alafia R at Lithia","max_wq_ever",140
-"Chloride Alafia R at Lithia","min_wq_ever",7.87
-"Chloride Alafia R at Lithia","max_wq_2010",140
-"Chloride Alafia R at Lithia","min_wq_2010",7.87
-"Chloride Alafia R at Lithia","max_flow_wq_ever",8.4
-"Chloride Alafia R at Lithia","min_flow_wq_ever",1.5
-"Chloride Alafia R at Lithia","max_flow_wq_2010",8.1
-"Chloride Alafia R at Lithia","min_flow_wq_2010",2.5
-"Dissolved oxygen Alafia R at Lithia","max_flow_ever",10.6
-"Dissolved oxygen Alafia R at Lithia","min_flow_ever",1.4
-"Dissolved oxygen Alafia R at Lithia","max_flow_2010",9
-"Dissolved oxygen Alafia R at Lithia","min_flow_2010",1.6
-"Dissolved oxygen Alafia R at Lithia","max_wq_ever",14.1
-"Dissolved oxygen Alafia R at Lithia","min_wq_ever",1.82
-"Dissolved oxygen Alafia R at Lithia","max_wq_2010",14.1
-"Dissolved oxygen Alafia R at Lithia","min_wq_2010",4.8
-"Dissolved oxygen Alafia R at Lithia","max_flow_wq_ever",8.4
-"Dissolved oxygen Alafia R at Lithia","min_flow_wq_ever",1.5
-"Dissolved oxygen Alafia R at Lithia","max_flow_wq_2010",8.1
-"Dissolved oxygen Alafia R at Lithia","min_flow_wq_2010",1.7
-"Dissolved oxygen Hillsborough R at Morris Br","max_flow_ever",8.6
-"Dissolved oxygen Hillsborough R at Morris Br","min_flow_ever",3
-"Dissolved oxygen Hillsborough R at Morris Br","max_flow_2010",8.2
-"Dissolved oxygen Hillsborough R at Morris Br","min_flow_2010",3.6
-"Dissolved oxygen Hillsborough R at Morris Br","max_wq_ever",9.4
-"Dissolved oxygen Hillsborough R at Morris Br","min_wq_ever",0.19
-"Dissolved oxygen Hillsborough R at Morris Br","max_wq_2010",9.4
-"Dissolved oxygen Hillsborough R at Morris Br","min_wq_2010",0.19
-"Dissolved oxygen Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Dissolved oxygen Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Dissolved oxygen Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Dissolved oxygen Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Fluoride Alafia R at Lithia","max_flow_ever",10.6
-"Fluoride Alafia R at Lithia","min_flow_ever",1.4
-"Fluoride Alafia R at Lithia","max_flow_2010",9
-"Fluoride Alafia R at Lithia","min_flow_2010",1.6
-"Fluoride Alafia R at Lithia","max_wq_ever",3.3
-"Fluoride Alafia R at Lithia","min_wq_ever",0.16
-"Fluoride Alafia R at Lithia","max_wq_2010",2.4
-"Fluoride Alafia R at Lithia","min_wq_2010",0.16
-"Fluoride Alafia R at Lithia","max_flow_wq_ever",8.4
-"Fluoride Alafia R at Lithia","min_flow_wq_ever",1.5
-"Fluoride Alafia R at Lithia","max_flow_wq_2010",8.1
-"Fluoride Alafia R at Lithia","min_flow_wq_2010",1.7
-"Fluoride Hillsborough R at Morris Br","max_flow_ever",8.6
-"Fluoride Hillsborough R at Morris Br","min_flow_ever",3
-"Fluoride Hillsborough R at Morris Br","max_flow_2010",8.2
-"Fluoride Hillsborough R at Morris Br","min_flow_2010",3.6
-"Fluoride Hillsborough R at Morris Br","max_wq_ever",0.42
-"Fluoride Hillsborough R at Morris Br","min_wq_ever",0.08
-"Fluoride Hillsborough R at Morris Br","max_wq_2010",0.42
-"Fluoride Hillsborough R at Morris Br","min_wq_2010",0.14
-"Fluoride Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Fluoride Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Fluoride Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Fluoride Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Nitrate-nitrite as N Alafia R at Lithia","max_flow_ever",10.6
-"Nitrate-nitrite as N Alafia R at Lithia","min_flow_ever",1.4
-"Nitrate-nitrite as N Alafia R at Lithia","max_flow_2010",9
-"Nitrate-nitrite as N Alafia R at Lithia","min_flow_2010",1.6
-"Nitrate-nitrite as N Alafia R at Lithia","max_wq_ever",3.5
-"Nitrate-nitrite as N Alafia R at Lithia","min_wq_ever",0.007
-"Nitrate-nitrite as N Alafia R at Lithia","max_wq_2010",1.459
-"Nitrate-nitrite as N Alafia R at Lithia","min_wq_2010",0.015
-"Nitrate-nitrite as N Alafia R at Lithia","max_flow_wq_ever",8.4
-"Nitrate-nitrite as N Alafia R at Lithia","min_flow_wq_ever",1.5
-"Nitrate-nitrite as N Alafia R at Lithia","max_flow_wq_2010",8.1
-"Nitrate-nitrite as N Alafia R at Lithia","min_flow_wq_2010",1.7
-"Nitrate-nitrite as N Hillsborough R at Morris Br","max_flow_ever",8.6
-"Nitrate-nitrite as N Hillsborough R at Morris Br","min_flow_ever",3
-"Nitrate-nitrite as N Hillsborough R at Morris Br","max_flow_2010",8.2
-"Nitrate-nitrite as N Hillsborough R at Morris Br","min_flow_2010",3.6
-"Nitrate-nitrite as N Hillsborough R at Morris Br","max_wq_ever",1.708
-"Nitrate-nitrite as N Hillsborough R at Morris Br","min_wq_ever",0.0055
-"Nitrate-nitrite as N Hillsborough R at Morris Br","max_wq_2010",1.708
-"Nitrate-nitrite as N Hillsborough R at Morris Br","min_wq_2010",0.0055
-"Nitrate-nitrite as N Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Nitrate-nitrite as N Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Nitrate-nitrite as N Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Nitrate-nitrite as N Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Organic nitrogen Alafia R at Lithia","max_flow_ever",10.6
-"Organic nitrogen Alafia R at Lithia","min_flow_ever",1.4
-"Organic nitrogen Alafia R at Lithia","max_flow_2010",9
-"Organic nitrogen Alafia R at Lithia","min_flow_2010",1.6
-"Organic nitrogen Alafia R at Lithia","max_wq_ever",1.541
-"Organic nitrogen Alafia R at Lithia","min_wq_ever",0.0915
-"Organic nitrogen Alafia R at Lithia","max_wq_2010",1.385
-"Organic nitrogen Alafia R at Lithia","min_wq_2010",0.0915
-"Organic nitrogen Alafia R at Lithia","max_flow_wq_ever",7.9
-"Organic nitrogen Alafia R at Lithia","min_flow_wq_ever",1.7
-"Organic nitrogen Alafia R at Lithia","max_flow_wq_2010",7.9
-"Organic nitrogen Alafia R at Lithia","min_flow_wq_2010",1.7
-"Organic nitrogen Hillsborough R at Morris Br","max_flow_ever",8.6
-"Organic nitrogen Hillsborough R at Morris Br","min_flow_ever",3
-"Organic nitrogen Hillsborough R at Morris Br","max_flow_2010",8.2
-"Organic nitrogen Hillsborough R at Morris Br","min_flow_2010",3.6
-"Organic nitrogen Hillsborough R at Morris Br","max_wq_ever",1.824
-"Organic nitrogen Hillsborough R at Morris Br","min_wq_ever",0.079
-"Organic nitrogen Hillsborough R at Morris Br","max_wq_2010",1.642
-"Organic nitrogen Hillsborough R at Morris Br","min_wq_2010",0.079
-"Organic nitrogen Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Organic nitrogen Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Organic nitrogen Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Organic nitrogen Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Orthophosphate as P Alafia R at Lithia","max_flow_ever",10.6
-"Orthophosphate as P Alafia R at Lithia","min_flow_ever",1.4
-"Orthophosphate as P Alafia R at Lithia","max_flow_2010",9
-"Orthophosphate as P Alafia R at Lithia","min_flow_2010",1.6
-"Orthophosphate as P Alafia R at Lithia","max_wq_ever",3.4
-"Orthophosphate as P Alafia R at Lithia","min_wq_ever",0.061
-"Orthophosphate as P Alafia R at Lithia","max_wq_2010",1.988
-"Orthophosphate as P Alafia R at Lithia","min_wq_2010",0.37
-"Orthophosphate as P Alafia R at Lithia","max_flow_wq_ever",8.4
-"Orthophosphate as P Alafia R at Lithia","min_flow_wq_ever",1.5
-"Orthophosphate as P Alafia R at Lithia","max_flow_wq_2010",8.1
-"Orthophosphate as P Alafia R at Lithia","min_flow_wq_2010",1.7
-"Orthophosphate as P Hillsborough R at Morris Br","max_flow_ever",8.6
-"Orthophosphate as P Hillsborough R at Morris Br","min_flow_ever",3
-"Orthophosphate as P Hillsborough R at Morris Br","max_flow_2010",8.2
-"Orthophosphate as P Hillsborough R at Morris Br","min_flow_2010",3.6
-"Orthophosphate as P Hillsborough R at Morris Br","max_wq_ever",0.634
-"Orthophosphate as P Hillsborough R at Morris Br","min_wq_ever",0.0165
-"Orthophosphate as P Hillsborough R at Morris Br","max_wq_2010",0.634
-"Orthophosphate as P Hillsborough R at Morris Br","min_wq_2010",0.042
-"Orthophosphate as P Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Orthophosphate as P Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Orthophosphate as P Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Orthophosphate as P Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"pH Alafia R at Lithia","max_flow_ever",10.6
-"pH Alafia R at Lithia","min_flow_ever",1.4
-"pH Alafia R at Lithia","max_flow_2010",9
-"pH Alafia R at Lithia","min_flow_2010",1.6
-"pH Alafia R at Lithia","max_wq_ever",9.16
-"pH Alafia R at Lithia","min_wq_ever",5.3
-"pH Alafia R at Lithia","max_wq_2010",9.16
-"pH Alafia R at Lithia","min_wq_2010",5.3
-"pH Alafia R at Lithia","max_flow_wq_ever",8.4
-"pH Alafia R at Lithia","min_flow_wq_ever",1.5
-"pH Alafia R at Lithia","max_flow_wq_2010",8.1
-"pH Alafia R at Lithia","min_flow_wq_2010",1.7
-"pH Hillsborough R at Morris Br","max_flow_ever",8.6
-"pH Hillsborough R at Morris Br","min_flow_ever",3
-"pH Hillsborough R at Morris Br","max_flow_2010",8.2
-"pH Hillsborough R at Morris Br","min_flow_2010",3.6
-"pH Hillsborough R at Morris Br","max_wq_ever",8.25
-"pH Hillsborough R at Morris Br","min_wq_ever",5.12
-"pH Hillsborough R at Morris Br","max_wq_2010",8.25
-"pH Hillsborough R at Morris Br","min_wq_2010",5.12
-"pH Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"pH Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"pH Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"pH Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Specific conductance Alafia R at Lithia","max_flow_ever",10.6
-"Specific conductance Alafia R at Lithia","min_flow_ever",1.4
-"Specific conductance Alafia R at Lithia","max_flow_2010",9
-"Specific conductance Alafia R at Lithia","min_flow_2010",1.6
-"Specific conductance Alafia R at Lithia","max_wq_ever",1061
-"Specific conductance Alafia R at Lithia","min_wq_ever",148
-"Specific conductance Alafia R at Lithia","max_wq_2010",1061
-"Specific conductance Alafia R at Lithia","min_wq_2010",148
-"Specific conductance Alafia R at Lithia","max_flow_wq_ever",8.4
-"Specific conductance Alafia R at Lithia","min_flow_wq_ever",1.5
-"Specific conductance Alafia R at Lithia","max_flow_wq_2010",8.1
-"Specific conductance Alafia R at Lithia","min_flow_wq_2010",1.7
-"Specific conductance Hillsborough R at Morris Br","max_flow_ever",8.6
-"Specific conductance Hillsborough R at Morris Br","min_flow_ever",3
-"Specific conductance Hillsborough R at Morris Br","max_flow_2010",8.2
-"Specific conductance Hillsborough R at Morris Br","min_flow_2010",3.6
-"Specific conductance Hillsborough R at Morris Br","max_wq_ever",473
-"Specific conductance Hillsborough R at Morris Br","min_wq_ever",103
-"Specific conductance Hillsborough R at Morris Br","max_wq_2010",457
-"Specific conductance Hillsborough R at Morris Br","min_wq_2010",103
-"Specific conductance Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Specific conductance Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Specific conductance Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Specific conductance Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Sulfate Alafia R at Lithia","max_flow_ever",10.6
-"Sulfate Alafia R at Lithia","min_flow_ever",1.4
-"Sulfate Alafia R at Lithia","max_flow_2010",9
-"Sulfate Alafia R at Lithia","min_flow_2010",1.6
-"Sulfate Alafia R at Lithia","max_wq_ever",239
-"Sulfate Alafia R at Lithia","min_wq_ever",6.5
-"Sulfate Alafia R at Lithia","max_wq_2010",236
-"Sulfate Alafia R at Lithia","min_wq_2010",6.5
-"Sulfate Alafia R at Lithia","max_flow_wq_ever",7.9
-"Sulfate Alafia R at Lithia","min_flow_wq_ever",1.7
-"Sulfate Alafia R at Lithia","max_flow_wq_2010",7.9
-"Sulfate Alafia R at Lithia","min_flow_wq_2010",1.7
-"Sulfate Hillsborough R at Morris Br","max_flow_ever",8.6
-"Sulfate Hillsborough R at Morris Br","min_flow_ever",3
-"Sulfate Hillsborough R at Morris Br","max_flow_2010",8.2
-"Sulfate Hillsborough R at Morris Br","min_flow_2010",3.6
-"Sulfate Hillsborough R at Morris Br","max_wq_ever",108
-"Sulfate Hillsborough R at Morris Br","min_wq_ever",2.5
-"Sulfate Hillsborough R at Morris Br","max_wq_2010",108
-"Sulfate Hillsborough R at Morris Br","min_wq_2010",2.5
-"Sulfate Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Sulfate Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Sulfate Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Sulfate Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Temperature Alafia R at Lithia","max_flow_ever",10.6
-"Temperature Alafia R at Lithia","min_flow_ever",1.4
-"Temperature Alafia R at Lithia","max_flow_2010",9
-"Temperature Alafia R at Lithia","min_flow_2010",1.6
-"Temperature Alafia R at Lithia","max_wq_ever",29.5
-"Temperature Alafia R at Lithia","min_wq_ever",8.1
-"Temperature Alafia R at Lithia","max_wq_2010",29.5
-"Temperature Alafia R at Lithia","min_wq_2010",8.1
-"Temperature Alafia R at Lithia","max_flow_wq_ever",8.4
-"Temperature Alafia R at Lithia","min_flow_wq_ever",1.5
-"Temperature Alafia R at Lithia","max_flow_wq_2010",8.1
-"Temperature Alafia R at Lithia","min_flow_wq_2010",1.7
-"Temperature Hillsborough R at Morris Br","max_flow_ever",8.6
-"Temperature Hillsborough R at Morris Br","min_flow_ever",3
-"Temperature Hillsborough R at Morris Br","max_flow_2010",8.2
-"Temperature Hillsborough R at Morris Br","min_flow_2010",3.6
-"Temperature Hillsborough R at Morris Br","max_wq_ever",27.49
-"Temperature Hillsborough R at Morris Br","min_wq_ever",2.52
-"Temperature Hillsborough R at Morris Br","max_wq_2010",27.49
-"Temperature Hillsborough R at Morris Br","min_wq_2010",2.52
-"Temperature Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Temperature Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Temperature Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Temperature Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Total dissolved solids Alafia R at Lithia","max_flow_ever",10.6
-"Total dissolved solids Alafia R at Lithia","min_flow_ever",1.4
-"Total dissolved solids Alafia R at Lithia","max_flow_2010",9
-"Total dissolved solids Alafia R at Lithia","min_flow_2010",1.6
-"Total dissolved solids Alafia R at Lithia","max_wq_ever",623
-"Total dissolved solids Alafia R at Lithia","min_wq_ever",97
-"Total dissolved solids Alafia R at Lithia","max_wq_2010",623
-"Total dissolved solids Alafia R at Lithia","min_wq_2010",130
-"Total dissolved solids Alafia R at Lithia","max_flow_wq_ever",8.4
-"Total dissolved solids Alafia R at Lithia","min_flow_wq_ever",1.5
-"Total dissolved solids Alafia R at Lithia","max_flow_wq_2010",8.1
-"Total dissolved solids Alafia R at Lithia","min_flow_wq_2010",2.5
-"Total organic carbon Alafia R at Lithia","max_flow_ever",10.6
-"Total organic carbon Alafia R at Lithia","min_flow_ever",1.4
-"Total organic carbon Alafia R at Lithia","max_flow_2010",9
-"Total organic carbon Alafia R at Lithia","min_flow_2010",1.6
-"Total organic carbon Alafia R at Lithia","max_wq_ever",26
-"Total organic carbon Alafia R at Lithia","min_wq_ever",1.875
-"Total organic carbon Alafia R at Lithia","max_wq_2010",25
-"Total organic carbon Alafia R at Lithia","min_wq_2010",1.875
-"Total organic carbon Alafia R at Lithia","max_flow_wq_ever",8.4
-"Total organic carbon Alafia R at Lithia","min_flow_wq_ever",1.5
-"Total organic carbon Alafia R at Lithia","max_flow_wq_2010",8.1
-"Total organic carbon Alafia R at Lithia","min_flow_wq_2010",1.7
-"Total organic carbon Hillsborough R at Morris Br","max_flow_ever",8.6
-"Total organic carbon Hillsborough R at Morris Br","min_flow_ever",3
-"Total organic carbon Hillsborough R at Morris Br","max_flow_2010",8.2
-"Total organic carbon Hillsborough R at Morris Br","min_flow_2010",3.6
-"Total organic carbon Hillsborough R at Morris Br","max_wq_ever",38.8
-"Total organic carbon Hillsborough R at Morris Br","min_wq_ever",1.3
-"Total organic carbon Hillsborough R at Morris Br","max_wq_2010",38.8
-"Total organic carbon Hillsborough R at Morris Br","min_wq_2010",1.3
-"Total organic carbon Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Total organic carbon Hillsborough R at Morris Br","min_flow_wq_ever",3.8
-"Total organic carbon Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Total organic carbon Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Total phosphorus as P Alafia R at Lithia","max_flow_ever",10.6
-"Total phosphorus as P Alafia R at Lithia","min_flow_ever",1.4
-"Total phosphorus as P Alafia R at Lithia","max_flow_2010",9
-"Total phosphorus as P Alafia R at Lithia","min_flow_2010",1.6
-"Total phosphorus as P Alafia R at Lithia","max_wq_ever",6.9
-"Total phosphorus as P Alafia R at Lithia","min_wq_ever",0.15825
-"Total phosphorus as P Alafia R at Lithia","max_wq_2010",4.141
-"Total phosphorus as P Alafia R at Lithia","min_wq_2010",0.4
-"Total phosphorus as P Alafia R at Lithia","max_flow_wq_ever",8.4
-"Total phosphorus as P Alafia R at Lithia","min_flow_wq_ever",1.5
-"Total phosphorus as P Alafia R at Lithia","max_flow_wq_2010",8.1
-"Total phosphorus as P Alafia R at Lithia","min_flow_wq_2010",1.7
-"Total phosphorus as P Hillsborough R at Morris Br","max_flow_ever",8.6
-"Total phosphorus as P Hillsborough R at Morris Br","min_flow_ever",3
-"Total phosphorus as P Hillsborough R at Morris Br","max_flow_2010",8.2
-"Total phosphorus as P Hillsborough R at Morris Br","min_flow_2010",3.6
-"Total phosphorus as P Hillsborough R at Morris Br","max_wq_ever",0.735
-"Total phosphorus as P Hillsborough R at Morris Br","min_wq_ever",0.043
-"Total phosphorus as P Hillsborough R at Morris Br","max_wq_2010",0.735
-"Total phosphorus as P Hillsborough R at Morris Br","min_wq_2010",0.043
-"Total phosphorus as P Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"Total phosphorus as P Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Total phosphorus as P Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"Total phosphorus as P Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"True color Alafia R at Lithia","max_flow_ever",10.6
-"True color Alafia R at Lithia","min_flow_ever",1.4
-"True color Alafia R at Lithia","max_flow_2010",9
-"True color Alafia R at Lithia","min_flow_2010",1.6
-"True color Alafia R at Lithia","max_wq_ever",240
-"True color Alafia R at Lithia","min_wq_ever",14.1
-"True color Alafia R at Lithia","max_wq_2010",240
-"True color Alafia R at Lithia","min_wq_2010",15.6
-"True color Alafia R at Lithia","max_flow_wq_ever",7.9
-"True color Alafia R at Lithia","min_flow_wq_ever",1.7
-"True color Alafia R at Lithia","max_flow_wq_2010",7.9
-"True color Alafia R at Lithia","min_flow_wq_2010",1.7
-"True color Hillsborough R at Morris Br","max_flow_ever",8.6
-"True color Hillsborough R at Morris Br","min_flow_ever",3
-"True color Hillsborough R at Morris Br","max_flow_2010",8.2
-"True color Hillsborough R at Morris Br","min_flow_2010",3.6
-"True color Hillsborough R at Morris Br","max_wq_ever",162.5
-"True color Hillsborough R at Morris Br","min_wq_ever",3.9
-"True color Hillsborough R at Morris Br","max_wq_2010",162.5
-"True color Hillsborough R at Morris Br","min_wq_2010",3.9
-"True color Hillsborough R at Morris Br","max_flow_wq_ever",7.7
-"True color Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"True color Hillsborough R at Morris Br","max_flow_wq_2010",7.7
-"True color Hillsborough R at Morris Br","min_flow_wq_2010",3.8
-"Turbidity Alafia R at Lithia","max_flow_ever",10.6
-"Turbidity Alafia R at Lithia","min_flow_ever",1.4
-"Turbidity Alafia R at Lithia","max_flow_2010",9
-"Turbidity Alafia R at Lithia","min_flow_2010",1.6
-"Turbidity Alafia R at Lithia","max_wq_ever",45.9
-"Turbidity Alafia R at Lithia","min_wq_ever",0.35
-"Turbidity Alafia R at Lithia","max_wq_2010",30
-"Turbidity Alafia R at Lithia","min_wq_2010",0.5
-"Turbidity Alafia R at Lithia","max_flow_wq_ever",8.4
-"Turbidity Alafia R at Lithia","min_flow_wq_ever",1.5
-"Turbidity Alafia R at Lithia","max_flow_wq_2010",8.1
-"Turbidity Alafia R at Lithia","min_flow_wq_2010",1.7
-"Turbidity Hillsborough R at Morris Br","max_flow_ever",8.6
-"Turbidity Hillsborough R at Morris Br","min_flow_ever",3
-"Turbidity Hillsborough R at Morris Br","max_flow_2010",8.2
-"Turbidity Hillsborough R at Morris Br","min_flow_2010",3.6
-"Turbidity Hillsborough R at Morris Br","max_wq_ever",14.9
-"Turbidity Hillsborough R at Morris Br","min_wq_ever",0.8
-"Turbidity Hillsborough R at Morris Br","max_wq_2010",10.6
-"Turbidity Hillsborough R at Morris Br","min_wq_2010",0.8
-"Turbidity Hillsborough R at Morris Br","max_flow_wq_ever",7.5
-"Turbidity Hillsborough R at Morris Br","min_flow_wq_ever",3.5
-"Turbidity Hillsborough R at Morris Br","max_flow_wq_2010",7.5
-"Turbidity Hillsborough R at Morris Br","min_flow_wq_2010",3.8
+"title","site","name","value"
+"Alkalinity Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Alkalinity Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Alkalinity Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Alkalinity Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Alkalinity Alafia R at Lithia","Alafia","max_wq_ever",172
+"Alkalinity Alafia R at Lithia","Alafia","min_wq_ever",33
+"Alkalinity Alafia R at Lithia","Alafia","max_wq_2010",172
+"Alkalinity Alafia R at Lithia","Alafia","min_wq_2010",34
+"Alkalinity Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Alkalinity Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Alkalinity Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Alkalinity Alafia R at Lithia","Alafia","min_flow_wq_2010",2.468
+"Chloride Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Chloride Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Chloride Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Chloride Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Chloride Alafia R at Lithia","Alafia","max_wq_ever",140
+"Chloride Alafia R at Lithia","Alafia","min_wq_ever",7.87
+"Chloride Alafia R at Lithia","Alafia","max_wq_2010",140
+"Chloride Alafia R at Lithia","Alafia","min_wq_2010",7.87
+"Chloride Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Chloride Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Chloride Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Chloride Alafia R at Lithia","Alafia","min_flow_wq_2010",2.468
+"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Dissolved oxygen Alafia R at Lithia","Alafia","max_wq_ever",14.1
+"Dissolved oxygen Alafia R at Lithia","Alafia","min_wq_ever",1.82
+"Dissolved oxygen Alafia R at Lithia","Alafia","max_wq_2010",14.1
+"Dissolved oxygen Alafia R at Lithia","Alafia","min_wq_2010",4.8
+"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_wq_ever",9.4
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.19
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_wq_2010",9.4
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.19
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Fluoride Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Fluoride Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Fluoride Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Fluoride Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Fluoride Alafia R at Lithia","Alafia","max_wq_ever",3.3
+"Fluoride Alafia R at Lithia","Alafia","min_wq_ever",0.16
+"Fluoride Alafia R at Lithia","Alafia","max_wq_2010",2.4
+"Fluoride Alafia R at Lithia","Alafia","min_wq_2010",0.16
+"Fluoride Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Fluoride Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Fluoride Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Fluoride Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_wq_ever",0.42
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.08
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_wq_2010",0.42
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.14
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_wq_ever",3.5
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_wq_ever",0.007
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_wq_2010",1.459
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_wq_2010",0.015
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_wq_ever",1.708
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.0055
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_wq_2010",1.708
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.0055
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Organic nitrogen Alafia R at Lithia","Alafia","max_wq_ever",1.541
+"Organic nitrogen Alafia R at Lithia","Alafia","min_wq_ever",0.0915
+"Organic nitrogen Alafia R at Lithia","Alafia","max_wq_2010",1.385
+"Organic nitrogen Alafia R at Lithia","Alafia","min_wq_2010",0.0915
+"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_wq_ever",7.941
+"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_wq_ever",1.679
+"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_wq_2010",7.941
+"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_wq_ever",1.824
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.079
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_wq_2010",1.642
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.079
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Orthophosphate as P Alafia R at Lithia","Alafia","max_wq_ever",3.4
+"Orthophosphate as P Alafia R at Lithia","Alafia","min_wq_ever",0.061
+"Orthophosphate as P Alafia R at Lithia","Alafia","max_wq_2010",1.988
+"Orthophosphate as P Alafia R at Lithia","Alafia","min_wq_2010",0.37
+"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_wq_ever",0.634
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.0165
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_wq_2010",0.634
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.042
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"pH Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"pH Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"pH Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"pH Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"pH Alafia R at Lithia","Alafia","max_wq_ever",9.16
+"pH Alafia R at Lithia","Alafia","min_wq_ever",5.3
+"pH Alafia R at Lithia","Alafia","max_wq_2010",9.16
+"pH Alafia R at Lithia","Alafia","min_wq_2010",5.3
+"pH Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"pH Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"pH Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"pH Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"pH Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"pH Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"pH Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"pH Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"pH Hillsborough R at Morris Br","Hillsborough","max_wq_ever",8.25
+"pH Hillsborough R at Morris Br","Hillsborough","min_wq_ever",5.12
+"pH Hillsborough R at Morris Br","Hillsborough","max_wq_2010",8.25
+"pH Hillsborough R at Morris Br","Hillsborough","min_wq_2010",5.12
+"pH Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"pH Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"pH Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"pH Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Specific conductance Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Specific conductance Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Specific conductance Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Specific conductance Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Specific conductance Alafia R at Lithia","Alafia","max_wq_ever",1061
+"Specific conductance Alafia R at Lithia","Alafia","min_wq_ever",148
+"Specific conductance Alafia R at Lithia","Alafia","max_wq_2010",1061
+"Specific conductance Alafia R at Lithia","Alafia","min_wq_2010",148
+"Specific conductance Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Specific conductance Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Specific conductance Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Specific conductance Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_wq_ever",473
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_wq_ever",103
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_wq_2010",457
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_wq_2010",103
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Sulfate Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Sulfate Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Sulfate Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Sulfate Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Sulfate Alafia R at Lithia","Alafia","max_wq_ever",239
+"Sulfate Alafia R at Lithia","Alafia","min_wq_ever",6.5
+"Sulfate Alafia R at Lithia","Alafia","max_wq_2010",236
+"Sulfate Alafia R at Lithia","Alafia","min_wq_2010",6.5
+"Sulfate Alafia R at Lithia","Alafia","max_flow_wq_ever",7.941
+"Sulfate Alafia R at Lithia","Alafia","min_flow_wq_ever",1.679
+"Sulfate Alafia R at Lithia","Alafia","max_flow_wq_2010",7.941
+"Sulfate Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Sulfate Hillsborough R at Morris Br","Hillsborough","max_wq_ever",108
+"Sulfate Hillsborough R at Morris Br","Hillsborough","min_wq_ever",2.5
+"Sulfate Hillsborough R at Morris Br","Hillsborough","max_wq_2010",108
+"Sulfate Hillsborough R at Morris Br","Hillsborough","min_wq_2010",2.5
+"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Temperature Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Temperature Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Temperature Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Temperature Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Temperature Alafia R at Lithia","Alafia","max_wq_ever",29.5
+"Temperature Alafia R at Lithia","Alafia","min_wq_ever",8.1
+"Temperature Alafia R at Lithia","Alafia","max_wq_2010",29.5
+"Temperature Alafia R at Lithia","Alafia","min_wq_2010",8.1
+"Temperature Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Temperature Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Temperature Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Temperature Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_wq_ever",27.49
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_wq_ever",2.52
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_wq_2010",27.49
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_wq_2010",2.52
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Total dissolved solids Alafia R at Lithia","Alafia","max_wq_ever",623
+"Total dissolved solids Alafia R at Lithia","Alafia","min_wq_ever",97
+"Total dissolved solids Alafia R at Lithia","Alafia","max_wq_2010",623
+"Total dissolved solids Alafia R at Lithia","Alafia","min_wq_2010",130
+"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_wq_2010",2.468
+"Total organic carbon Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Total organic carbon Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Total organic carbon Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Total organic carbon Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Total organic carbon Alafia R at Lithia","Alafia","max_wq_ever",26
+"Total organic carbon Alafia R at Lithia","Alafia","min_wq_ever",1.875
+"Total organic carbon Alafia R at Lithia","Alafia","max_wq_2010",25
+"Total organic carbon Alafia R at Lithia","Alafia","min_wq_2010",1.875
+"Total organic carbon Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Total organic carbon Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Total organic carbon Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Total organic carbon Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_wq_ever",38.8
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_wq_ever",1.3
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_wq_2010",38.8
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_wq_2010",1.3
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.809
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Total phosphorus as P Alafia R at Lithia","Alafia","max_wq_ever",6.9
+"Total phosphorus as P Alafia R at Lithia","Alafia","min_wq_ever",0.15825
+"Total phosphorus as P Alafia R at Lithia","Alafia","max_wq_2010",4.141
+"Total phosphorus as P Alafia R at Lithia","Alafia","min_wq_2010",0.4
+"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_wq_ever",0.735
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.043
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_wq_2010",0.735
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.043
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"True color Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"True color Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"True color Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"True color Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"True color Alafia R at Lithia","Alafia","max_wq_ever",240
+"True color Alafia R at Lithia","Alafia","min_wq_ever",14.1
+"True color Alafia R at Lithia","Alafia","max_wq_2010",240
+"True color Alafia R at Lithia","Alafia","min_wq_2010",15.6
+"True color Alafia R at Lithia","Alafia","max_flow_wq_ever",7.941
+"True color Alafia R at Lithia","Alafia","min_flow_wq_ever",1.679
+"True color Alafia R at Lithia","Alafia","max_flow_wq_2010",7.941
+"True color Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"True color Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"True color Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"True color Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"True color Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"True color Hillsborough R at Morris Br","Hillsborough","max_wq_ever",162.5
+"True color Hillsborough R at Morris Br","Hillsborough","min_wq_ever",3.9
+"True color Hillsborough R at Morris Br","Hillsborough","max_wq_2010",162.5
+"True color Hillsborough R at Morris Br","Hillsborough","min_wq_2010",3.9
+"True color Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.682
+"True color Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"True color Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.682
+"True color Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809
+"Turbidity Alafia R at Lithia","Alafia","max_flow_ever",10.616
+"Turbidity Alafia R at Lithia","Alafia","min_flow_ever",1.411
+"Turbidity Alafia R at Lithia","Alafia","max_flow_2010",9.001
+"Turbidity Alafia R at Lithia","Alafia","min_flow_2010",1.629
+"Turbidity Alafia R at Lithia","Alafia","max_wq_ever",45.9
+"Turbidity Alafia R at Lithia","Alafia","min_wq_ever",0.35
+"Turbidity Alafia R at Lithia","Alafia","max_wq_2010",30
+"Turbidity Alafia R at Lithia","Alafia","min_wq_2010",0.5
+"Turbidity Alafia R at Lithia","Alafia","max_flow_wq_ever",8.436
+"Turbidity Alafia R at Lithia","Alafia","min_flow_wq_ever",1.504
+"Turbidity Alafia R at Lithia","Alafia","max_flow_wq_2010",8.132
+"Turbidity Alafia R at Lithia","Alafia","min_flow_wq_2010",1.679
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_ever",8.65
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_ever",3.045
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_2010",8.221
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_2010",3.635
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_wq_ever",14.9
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_wq_ever",0.8
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_wq_2010",10.6
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_wq_2010",0.8
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_wq_ever",7.456
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_wq_ever",3.52
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_wq_2010",7.456
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_wq_2010",3.809

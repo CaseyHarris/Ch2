@@ -68,5 +68,5 @@ full_flow_range <- data.frame("Q_cfs_log_round" = seq(from=-8.082, to=10.616, by
 full_flow_range <- full_flow_range %>%
   mutate(Q_cfs_log_round = as.numeric(as.character(Q_cfs_log_round)))
 unique(full_flow_range$Q_cfs_log_round) #18699
-write.csv(full_flow_range, "01_Data/full_flow_range.csv", row.names=FALSE)
+#write.csv(full_flow_range, "01_Data/full_flow_range.csv", row.names=FALSE)
 
