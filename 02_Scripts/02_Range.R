@@ -50,7 +50,7 @@ for (i in wq_names_df$wq_names) {
   min_flow_wq_ever <- 10^mean(log10(min(wq_flow$Q_cfs[!is.na(wq_flow$ConcAve)])))
   max_flow_wq_2010 <- 10^mean(log10(max(wq_flow$Q_cfs[!is.na(wq_flow$ConcAve) & wq_flow$Date>=as.Date("2010-01-01") & wq_flow$Date<as.Date("2020-01-01")])))
   min_flow_wq_2010 <- 10^mean(log10(min(wq_flow$Q_cfs[!is.na(wq_flow$ConcAve) & wq_flow$Date>=as.Date("2010-01-01") & wq_flow$Date<as.Date("2020-01-01")])))
-
+  
   max_min_new <- data.frame("title"=title, "site"=site, 
                             "max_flow_ever" = max_flow_ever,
                             "min_flow_ever" = min_flow_ever,

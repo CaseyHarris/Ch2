@@ -174,9 +174,8 @@ foreach(i = 1:length(wq_names$wq_names),
               mutate(max = max(c_across(1:1000))) %>%
               select(max)
   max_wq_log <- log(max_wq$max)
-  rm
   
-  #percentiles of past wq
+  #median of past wq
   median_wq <- both1 %>%
     filter(Chang_item==1369) %>%
     select((ncol(both1)-999):ncol(both1)) %>%
@@ -198,11 +197,12 @@ foreach(i = 1:length(wq_names$wq_names),
   #then select one set of JAGS estimates at a time (1000 realizations), 
   #and estimate exceedances for each wq level in the wq_list
   
-              exceed_df <- data.frame()
               j=4
               k=1
               q=wq_list[50]
               for (j in unique(models_to_use$Chang_item)) {
+                
+                exceed_df <- data.frame()
                 
                 sub <- both1 %>%
                   filter(Chang_item==j)
@@ -236,16 +236,20 @@ foreach(i = 1:length(wq_names$wq_names),
                 }
                 
                 if (j==1) {
-                  write.table(y_row, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Exceedance in prog/", title_use, ".csv", sep=""), row.names=FALSE)
-                  #write.table(y_row, paste("/blue/carpena/caseyharris/Ch2/Results/y/", title_use, ".csv", sep=""), row.names=FALSE)
+                  write.table(exceed_df, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Exceedance in prog/", title_use, ".csv", sep=""), row.names=FALSE, col.names=TRUE)
+                  #write.table(exceed_df, paste("/blue/carpena/caseyharris/Ch2/Results/Exceedance in prog/", title_use, ".csv", sep=""), row.names=FALSE, col.names=TRUE)
                 } else {
-                  write.table(y_row, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Exceedance in prog/", title_use, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
-                  #write.table(y_row, paste("/blue/carpena/caseyharris/Ch2/Results/y/", title_use, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
+                  write.table(exceed_df, paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Exceedance in prog/", title_use, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
+                  #write.table(exceed_df, paste("/blue/carpena/caseyharris/Ch2/Results/Exceedance in prog/", title_use, ".csv", sep=""), row.names=FALSE, col.names=FALSE, append=TRUE)
                 }
                 
                 rm(sub)
+                rm(exceed_df)
               } #around 20 hrs per wq parameter
 
+            exceed_df <- read.table(paste("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Results/Exceedance in prog/", title_use, ".csv", sep=""), header=TRUE)
+            #exceed_df <- read.table(paste("/blue/carpena/caseyharris/Ch2/Results/Exceedance in prog/", title_use, ".csv", sep=""), header=TRUE)
+            
             j=4
             q=wq_list[50]
             exceed_df1 <- data.frame()
