@@ -194,7 +194,7 @@ flow_Alaf_Hills <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Onl
 flow_jason <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Jason1.csv")
 #flow_jason <- read.csv("/blue/carpena/caseyharris/Ch2/flow_Jason1.csv")
 
-i=1
+i=7
 for (i in 1:length(wq_names$wq_names)) {
   
   title_use <- gsub(".csv", "", wq_names$wq_names[i])
@@ -326,7 +326,7 @@ for (i in 1:length(wq_names$wq_names)) {
               Q_.95 = quantile(Q_cfs, .95),
               Q_.975 = quantile(Q_cfs, .975),
               Q_.99 = quantile(Q_cfs, .99))
-  
+    
   both1_Q1 <- both1_Q0 %>%
     ungroup() %>%
     left_join(models_to_use, by="Chang_item") %>%
@@ -338,12 +338,107 @@ for (i in 1:length(wq_names$wq_names)) {
     geom_errorbar(aes(ymin=Q_.01, ymax=Q_.99), width=0, position=position_dodge(width=.75, preserve="single")) +
     scale_y_log10() +
     scale_color_manual(values=c("#bababa", "#404040", "#f4a582", "#ca0020")) +
-    theme_minimal()
+    ggtitle("Streamflow") +
+    theme_bw()
+  ggsave("Lab meeting power point/Streamflow - Hillsborough - check.png", width=12, height=10)
   
+  #For WQ
+  #check both1 for zeros
   
-
-              across(r1:r1000, ~ quantile(.x, .5)))
+  both1_wq01 <- both1 %>%
+    mutate(month = lubridate::month(date, label=TRUE, abbr=TRUE)) %>%
+    ungroup() %>%
+    group_by(Chang_item, month) %>%
+    summarise(across(r1:r1000, ~quantile(.x, .01))) %>%
+    ungroup() %>%
+    pivot_longer(cols=c(r1:r1000)) %>%
+    mutate(quantile = .01)
+  both1_wq05 <- both1 %>%
+    mutate(month = lubridate::month(date, label=TRUE, abbr=TRUE)) %>%
+    ungroup() %>%
+    group_by(Chang_item, month) %>%
+    summarise(across(r1:r1000, ~quantile(.x, .05))) %>%
+    ungroup() %>%
+    pivot_longer(cols=c(r1:r1000)) %>%
+    mutate(quantile = .05)
+  both1_wq50 <- both1 %>%
+    mutate(month = lubridate::month(date, label=TRUE, abbr=TRUE)) %>%
+    ungroup() %>%
+    group_by(Chang_item, month) %>%
+    summarise(across(r1:r1000, ~quantile(.x, .5))) %>%
+    ungroup() %>%
+    pivot_longer(cols=c(r1:r1000)) %>%
+    mutate(quantile = .5)
+  both1_wq95 <- both1 %>%
+    mutate(month = lubridate::month(date, label=TRUE, abbr=TRUE)) %>%
+    ungroup() %>%
+    group_by(Chang_item, month) %>%
+    summarise(across(r1:r1000, ~quantile(.x, .95))) %>%
+    ungroup() %>%
+    pivot_longer(cols=c(r1:r1000)) %>%
+    mutate(quantile = .95)
+  both1_wq99 <- both1 %>%
+    mutate(month = lubridate::month(date, label=TRUE, abbr=TRUE)) %>%
+    ungroup() %>%
+    group_by(Chang_item, month) %>%
+    summarise(across(r1:r1000, ~quantile(.x, .99))) %>%
+    ungroup() %>%
+    pivot_longer(cols=c(r1:r1000)) %>%
+    mutate(quantile = .99)
+  
+  both1_wq_all <- both1_wq01 %>%
+    bind_rows(both1_wq05) %>%
+    bind_rows(both1_wq50) %>%
+    bind_rows(both1_wq95) %>%
+    bind_rows(both1_wq99)
+  
+  both1_wq_summary <- both1_wq_all %>%
+    group_by(Chang_item, quantile, month) %>%
+    summarise(mean = mean(value),
+              median = median(value),
+              low_025 = quantile(value, .025),
+              high_975 = quantile(value, .975)) %>%
+    ungroup() %>%
+    left_join(models_to_use, by="Chang_item") %>%
+    filter(!is.na(per))
+  
+  ggplot(both1_wq_summary, aes(month, median, group=Chang_item, color=per)) +
+    geom_point(position=position_dodge(width=.75)) +
+    geom_errorbar(aes(ymin=low_025, ymax=high_975), width=0, position=position_dodge(width=.75, preserve="single")) +
+    scale_color_manual(values=c("#bababa", "#404040", "#f4a582", "#ca0020")) +
+    ylab("Water quality (mg/l)") +
+    xlab("") +
+    ggtitle("Specific conductance by quantile and month") +
+    theme_bw() +
+    theme(legend.title=element_blank(), legend.position="bottom") +
+    facet_wrap(~quantile, ncol=1)
+  ggsave("Lab meeting power point/Check results sp cond.png", width=12, height=10)
+  
+  ggplot(both1_wq_summary, aes(month, mean, group=Chang_item, color=per)) +
+    geom_point(position=position_dodge(width=.75)) +
+    geom_errorbar(aes(ymin=low_025, ymax=high_975), width=0, position=position_dodge(width=.75, preserve="single")) +
+    scale_color_manual(values=c("#bababa", "#404040", "#f4a582", "#ca0020")) +
+    theme_minimal() +
+    facet_wrap(~quantile)
+  
 }
+
+#Probability that future WQ will be higher than past
+#and by how much on average
+both1_check <- both1 %>%
+  ungroup() %>%
+  left_join(models_to_use, by="Chang_item") %>%
+  filter(!is.na(per))
+
+ggplot(both1_check, aes(date, exp(Q_cfs_log_round), color=per)) +
+  geom_line() +
+  facet_grid(model~., scales="free_y")
+
+ggplot(both1_check, aes(date, Q_cfs_log_round_edit, color=per)) +
+  geom_line() +
+  facet_grid(model~., scales="free_y")
+#can see why cutting off flow to obs range is weird
+
 
 
           
