@@ -1,3 +1,9 @@
+#This script organizes streamflow data from 
+#Jason Chang's Matlab files to a .csv file
+#I am using only the "business as usual"
+#realizations, which means no landuse 
+#changes between the past/future
+
 library(rmatio)
 library(readxl)
 library(tidyverse)

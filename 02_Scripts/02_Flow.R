@@ -1,9 +1,13 @@
 #FLOW
 
 #This script retrieves USGS flow data,
-#loads Chang et al. flow data,
+#loads Chang et al. streamflow data,
 #edits both to include logged/rounded flow values,
-#and creates/saves a list of the min to max flow values with a step of .001
+#and creates/saves a list of the min to max flow 
+#values with a step of .001 on the log scale.
+#These will be the flow values that 
+#subsequent scripts will estimate
+#water quality values for.
 
 library(tidyverse)
 library(dataRetrieval)
@@ -53,7 +57,7 @@ flow_Alaf_Hills <- Alaf_flow1 %>%
   select(site, scenario, Date, Q_cfs, Q_cfs_log, Q_cfs_log_round) %>%
   filter(!is.na(Q_cfs))
 write.csv(flow_Alaf_Hills, "C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Alaf_Hills.csv", row.names=FALSE)
-#flow_Alaf_Hills <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Alaf_Hills.csv")
+flow_Alaf_Hills <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Alaf_Hills.csv")
 unique(flow_Alaf_Hills$Q_cfs) #2236
 unique(flow_Alaf_Hills$Q_cfs_log_round) #2236
 min(flow_Alaf_Hills$Q_cfs_log_round) #1.411
@@ -73,7 +77,7 @@ flow_Jason1 <- flow_Jason %>%
   mutate(Q_cfs_log = log(Q_cfs_nonzero)) %>%
   mutate(Q_cfs_log_round = round(Q_cfs_log, 3))
 write.csv(flow_Jason1, "C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Jason1.csv", row.names=FALSE)
-#flow_Jason1 <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Jason1.csv")
+flow_Jason1 <- read.csv("C:/Users/cshar/OneDrive - University of Florida/Online_diss_files/Ch2/Large files/Data/flow_Jason1.csv")
 unique(flow_Jason1$Q_cfs) #1505373
 unique(flow_Jason1$Q_cfs_log_round) #11192, such a big difference, but still assuming Q is continuous
 min(flow_Jason1$Q_cfs_log_round) #-8.082

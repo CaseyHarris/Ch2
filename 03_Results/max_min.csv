@@ -1,465 +1,469 @@
 "title","site","name","value"
+"Alkalinity Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Alkalinity Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Alkalinity Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Alkalinity Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Alkalinity Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Alkalinity Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Alkalinity Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Alkalinity Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Alkalinity Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",160
+"Alkalinity Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",30.2
+"Alkalinity Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Alkalinity Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
 "Alkalinity Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
 "Alkalinity Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
 "Alkalinity Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
 "Alkalinity Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Alkalinity Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Alkalinity Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
+"Alkalinity Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Alkalinity Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
 "Alkalinity Alafia R at Lithia","Alafia","max_flow_future",10.481
 "Alkalinity Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Alkalinity Alafia R at Lithia","Alafia","max_wq_1989_2012",163
-"Alkalinity Alafia R at Lithia","Alafia","min_wq_1989_2012",40
-"Alkalinity Alafia R at Lithia","Alafia","max_wq_2010_2019",172
-"Alkalinity Alafia R at Lithia","Alafia","min_wq_2010_2019",34
-"Alkalinity Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Alkalinity Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Alkalinity Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Alkalinity Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",2.468
-"Chloride Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Chloride Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Chloride Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Chloride Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Chloride Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Chloride Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Chloride Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Chloride Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Chloride Alafia R at Lithia","Alafia","max_wq_1989_2012",140
-"Chloride Alafia R at Lithia","Alafia","min_wq_1989_2012",11
-"Chloride Alafia R at Lithia","Alafia","max_wq_2010_2019",140
-"Chloride Alafia R at Lithia","Alafia","min_wq_2010_2019",7.87
-"Chloride Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Chloride Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Chloride Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Chloride Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",2.468
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_wq_1989_2012",14.1
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_wq_1989_2012",1.82
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_wq_2010_2019",14.1
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_wq_2010_2019",4.8
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Dissolved oxygen Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Dissolved oxygen Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",8.34
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",1.23
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",9.4
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.19
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Dissolved oxygen Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
+"Alkalinity Alafia R at Lithia","Alafia","max_wq_2013_2022",172
+"Alkalinity Alafia R at Lithia","Alafia","min_wq_2013_2022",33
+"Alkalinity Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Alkalinity Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
+"Chlorophyll Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Chlorophyll Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Chlorophyll Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Chlorophyll Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Chlorophyll Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Chlorophyll Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Chlorophyll Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Chlorophyll Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Chlorophyll Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",49.925
+"Chlorophyll Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.475
+"Chlorophyll Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Chlorophyll Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
+"Chlorophyll Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Chlorophyll Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Chlorophyll Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Chlorophyll Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Chlorophyll Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Chlorophyll Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Chlorophyll Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Chlorophyll Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Chlorophyll Alafia R at Lithia","Alafia","max_wq_2013_2022",25.775
+"Chlorophyll Alafia R at Lithia","Alafia","min_wq_2013_2022",0.275
+"Chlorophyll Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",7.828
+"Chlorophyll Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",47.34
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",0.63
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Chlorophyll Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Color Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Color Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Color Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Color Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Color Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Color Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Color Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Color Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Color Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",123.5
+"Color Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",8.1
+"Color Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",7.645
+"Color Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.803
+"Color Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Color Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Color Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Color Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Color Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Color Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Color Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Color Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Color Alafia R at Lithia","Alafia","max_wq_2013_2022",240
+"Color Alafia R at Lithia","Alafia","min_wq_2013_2022",14.1
+"Color Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",7.828
+"Color Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
+"Color Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"Color Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"Color Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"Color Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"Color Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Color Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"Color Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"Color Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"Color Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",151.6
+"Color Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",3.9
+"Color Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Color Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"DO Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"DO Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"DO Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"DO Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"DO Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"DO Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"DO Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"DO Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"DO Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",9.2375
+"DO Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",4.7825
+"DO Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"DO Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
+"DO Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"DO Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"DO Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"DO Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"DO Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"DO Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"DO Alafia R at Lithia","Alafia","max_flow_future",10.481
+"DO Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"DO Alafia R at Lithia","Alafia","max_wq_2013_2022",11.93
+"DO Alafia R at Lithia","Alafia","min_wq_2013_2022",4.86
+"DO Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"DO Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
+"DO Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"DO Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"DO Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"DO Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"DO Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"DO Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"DO Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"DO Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"DO Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",8.82
+"DO Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",0.2175
+"DO Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"DO Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Fluoride Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Fluoride Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Fluoride Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Fluoride Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Fluoride Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Fluoride Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Fluoride Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Fluoride Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Fluoride Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",1.67
+"Fluoride Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.57
+"Fluoride Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Fluoride Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
 "Fluoride Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
 "Fluoride Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
 "Fluoride Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
 "Fluoride Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Fluoride Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Fluoride Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
+"Fluoride Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Fluoride Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
 "Fluoride Alafia R at Lithia","Alafia","max_flow_future",10.481
 "Fluoride Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Fluoride Alafia R at Lithia","Alafia","max_wq_1989_2012",3.3
-"Fluoride Alafia R at Lithia","Alafia","min_wq_1989_2012",0.32
-"Fluoride Alafia R at Lithia","Alafia","max_wq_2010_2019",2.4
-"Fluoride Alafia R at Lithia","Alafia","min_wq_2010_2019",0.16
-"Fluoride Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Fluoride Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Fluoride Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Fluoride Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
+"Fluoride Alafia R at Lithia","Alafia","max_wq_2013_2022",2.4
+"Fluoride Alafia R at Lithia","Alafia","min_wq_2013_2022",0.16
+"Fluoride Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Fluoride Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
 "Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
 "Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
 "Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
 "Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
 "Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
 "Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Fluoride Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",0.41
-"Fluoride Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",0.08
-"Fluoride Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",0.42
-"Fluoride Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.14
-"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_wq_1989_2012",3.5
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_wq_1989_2012",0.015
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_wq_2010_2019",1.459
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_wq_2010_2019",0.015
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Nitrate-nitrite as N Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",1.708
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",0.0055
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",1.708
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.0055
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Nitrate-nitrite as N Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Organic nitrogen Alafia R at Lithia","Alafia","max_wq_1989_2012",1.541
-"Organic nitrogen Alafia R at Lithia","Alafia","min_wq_1989_2012",0.337
-"Organic nitrogen Alafia R at Lithia","Alafia","max_wq_2010_2019",1.385
-"Organic nitrogen Alafia R at Lithia","Alafia","min_wq_2010_2019",0.0915
-"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",7.941
-"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.679
-"Organic nitrogen Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",7.941
-"Organic nitrogen Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",1.547
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",0.079
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",1.642
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.079
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Organic nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_wq_1989_2012",3.4
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_wq_1989_2012",0.061
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_wq_2010_2019",1.988
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_wq_2010_2019",0.37
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Orthophosphate as P Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Orthophosphate as P Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",0.52
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",0.042
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",0.634
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.042
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Orthophosphate as P Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",0.42
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",0.18
+"Fluoride Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Fluoride Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Iron Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Iron Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Iron Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Iron Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Iron Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Iron Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Iron Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Iron Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Iron Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",833
+"Iron Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",10
+"Iron Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Iron Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
+"Iron Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Iron Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Iron Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Iron Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Iron Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Iron Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Iron Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Iron Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Iron Alafia R at Lithia","Alafia","max_wq_2013_2022",830
+"Iron Alafia R at Lithia","Alafia","min_wq_2013_2022",6.7
+"Iron Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Iron Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.76
+"Manganese Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Manganese Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Manganese Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Manganese Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Manganese Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Manganese Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Manganese Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Manganese Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Manganese Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",35
+"Manganese Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.1
+"Manganese Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Manganese Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
+"Manganese Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Manganese Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Manganese Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Manganese Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Manganese Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Manganese Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Manganese Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Manganese Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Manganese Alafia R at Lithia","Alafia","max_wq_2013_2022",47
+"Manganese Alafia R at Lithia","Alafia","min_wq_2013_2022",4.8
+"Manganese Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Manganese Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.76
+"Nitrogen Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Nitrogen Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Nitrogen Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Nitrogen Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Nitrogen Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Nitrogen Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Nitrogen Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Nitrogen Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Nitrogen Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",2.412
+"Nitrogen Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.515
+"Nitrogen Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",7.645
+"Nitrogen Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.803
+"Nitrogen Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Nitrogen Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Nitrogen Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Nitrogen Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Nitrogen Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Nitrogen Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Nitrogen Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Nitrogen Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Nitrogen Alafia R at Lithia","Alafia","max_wq_2013_2022",2.011
+"Nitrogen Alafia R at Lithia","Alafia","min_wq_2013_2022",0.487
+"Nitrogen Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",7.645
+"Nitrogen Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.803
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",2.046
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",0.292
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Nitrogen Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"pH Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"pH Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"pH Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"pH Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"pH Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"pH Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"pH Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"pH Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"pH Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",8.64
+"pH Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",6.855
+"pH Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"pH Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
 "pH Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
 "pH Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
 "pH Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
 "pH Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"pH Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"pH Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
+"pH Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"pH Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
 "pH Alafia R at Lithia","Alafia","max_flow_future",10.481
 "pH Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"pH Alafia R at Lithia","Alafia","max_wq_1989_2012",9.16
-"pH Alafia R at Lithia","Alafia","min_wq_1989_2012",6.44
-"pH Alafia R at Lithia","Alafia","max_wq_2010_2019",9.16
-"pH Alafia R at Lithia","Alafia","min_wq_2010_2019",5.3
-"pH Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"pH Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"pH Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"pH Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
+"pH Alafia R at Lithia","Alafia","max_wq_2013_2022",9.04
+"pH Alafia R at Lithia","Alafia","min_wq_2013_2022",5.3
+"pH Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"pH Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
 "pH Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
 "pH Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
 "pH Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
 "pH Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"pH Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"pH Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
+"pH Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"pH Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
 "pH Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
 "pH Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"pH Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",8.25
-"pH Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",6.72
-"pH Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",8.25
-"pH Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",5.12
-"pH Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"pH Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"pH Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"pH Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Specific conductance Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Specific conductance Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Specific conductance Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Specific conductance Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Specific conductance Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Specific conductance Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Specific conductance Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Specific conductance Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Specific conductance Alafia R at Lithia","Alafia","max_wq_1989_2012",1061
-"Specific conductance Alafia R at Lithia","Alafia","min_wq_1989_2012",180
-"Specific conductance Alafia R at Lithia","Alafia","max_wq_2010_2019",1061
-"Specific conductance Alafia R at Lithia","Alafia","min_wq_2010_2019",148
-"Specific conductance Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Specific conductance Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Specific conductance Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Specific conductance Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",457
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",129
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",457
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",103
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Specific conductance Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Sulfate Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Sulfate Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Sulfate Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Sulfate Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Sulfate Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Sulfate Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Sulfate Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Sulfate Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Sulfate Alafia R at Lithia","Alafia","max_wq_1989_2012",239
-"Sulfate Alafia R at Lithia","Alafia","min_wq_1989_2012",6.5
-"Sulfate Alafia R at Lithia","Alafia","max_wq_2010_2019",236
-"Sulfate Alafia R at Lithia","Alafia","min_wq_2010_2019",6.5
-"Sulfate Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",7.941
-"Sulfate Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.679
-"Sulfate Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",7.941
-"Sulfate Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",86
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",2.5
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",108
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",2.5
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Sulfate Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Sulfate Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
+"pH Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",7.99
+"pH Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",5.12
+"pH Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"pH Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Phosphorus Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Phosphorus Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Phosphorus Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Phosphorus Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Phosphorus Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Phosphorus Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Phosphorus Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Phosphorus Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Phosphorus Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",2.7
+"Phosphorus Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.096
+"Phosphorus Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Phosphorus Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
+"Phosphorus Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Phosphorus Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Phosphorus Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Phosphorus Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Phosphorus Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Phosphorus Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Phosphorus Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Phosphorus Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Phosphorus Alafia R at Lithia","Alafia","max_wq_2013_2022",6.9
+"Phosphorus Alafia R at Lithia","Alafia","min_wq_2013_2022",0.058
+"Phosphorus Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Phosphorus Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",0.735
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",0.051
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Phosphorus Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Salinity Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Salinity Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Salinity Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Salinity Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Salinity Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Salinity Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Salinity Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Salinity Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Salinity Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",0.33
+"Salinity Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.0875
+"Salinity Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",7.645
+"Salinity Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.803
+"Salinity Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"Salinity Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"Salinity Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"Salinity Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"Salinity Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Salinity Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"Salinity Alafia R at Lithia","Alafia","max_flow_future",10.481
+"Salinity Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"Salinity Alafia R at Lithia","Alafia","max_wq_2013_2022",0.41
+"Salinity Alafia R at Lithia","Alafia","min_wq_2013_2022",0.05
+"Salinity Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",7.645
+"Salinity Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.803
+"Salinity Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"Salinity Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"Salinity Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"Salinity Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"Salinity Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Salinity Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"Salinity Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"Salinity Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"Salinity Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",0.23
+"Salinity Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",0.05
+"Salinity Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Salinity Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Temperature Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Temperature Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Temperature Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Temperature Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Temperature Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Temperature Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Temperature Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Temperature Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Temperature Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",28.4
+"Temperature Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",13.14
+"Temperature Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Temperature Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
 "Temperature Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
 "Temperature Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
 "Temperature Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
 "Temperature Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Temperature Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Temperature Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
+"Temperature Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Temperature Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
 "Temperature Alafia R at Lithia","Alafia","max_flow_future",10.481
 "Temperature Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Temperature Alafia R at Lithia","Alafia","max_wq_1989_2012",28.56
-"Temperature Alafia R at Lithia","Alafia","min_wq_1989_2012",8.1
-"Temperature Alafia R at Lithia","Alafia","max_wq_2010_2019",29.5
-"Temperature Alafia R at Lithia","Alafia","min_wq_2010_2019",8.1
-"Temperature Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Temperature Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Temperature Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Temperature Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
+"Temperature Alafia R at Lithia","Alafia","max_wq_2013_2022",29.5
+"Temperature Alafia R at Lithia","Alafia","min_wq_2013_2022",10.57
+"Temperature Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Temperature Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
 "Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
 "Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
 "Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
 "Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
 "Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
 "Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Temperature Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",27.49
-"Temperature Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",2.52
-"Temperature Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",27.49
-"Temperature Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",2.52
-"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Total dissolved solids Alafia R at Lithia","Alafia","max_wq_1989_2012",623
-"Total dissolved solids Alafia R at Lithia","Alafia","min_wq_1989_2012",137
-"Total dissolved solids Alafia R at Lithia","Alafia","max_wq_2010_2019",623
-"Total dissolved solids Alafia R at Lithia","Alafia","min_wq_2010_2019",130
-"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Total dissolved solids Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Total dissolved solids Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",2.468
-"Total organic carbon Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Total organic carbon Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Total organic carbon Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Total organic carbon Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Total organic carbon Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Total organic carbon Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Total organic carbon Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Total organic carbon Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Total organic carbon Alafia R at Lithia","Alafia","max_wq_1989_2012",26
-"Total organic carbon Alafia R at Lithia","Alafia","min_wq_1989_2012",6.3
-"Total organic carbon Alafia R at Lithia","Alafia","max_wq_2010_2019",25
-"Total organic carbon Alafia R at Lithia","Alafia","min_wq_2010_2019",1.875
-"Total organic carbon Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Total organic carbon Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Total organic carbon Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Total organic carbon Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",26.2
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",1.3
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",38.8
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",1.3
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",6.869
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.809
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Total organic carbon Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_future",10.481
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_wq_1989_2012",3.2
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_wq_1989_2012",0.71
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_wq_2010_2019",4.141
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_wq_2010_2019",0.4
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Total phosphorus as P Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Total phosphorus as P Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",0.703
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",0.043
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",0.735
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.043
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"Total phosphorus as P Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
-"True color Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
-"True color Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
-"True color Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
-"True color Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"True color Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"True color Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
-"True color Alafia R at Lithia","Alafia","max_flow_future",10.481
-"True color Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"True color Alafia R at Lithia","Alafia","max_wq_1989_2012",190
-"True color Alafia R at Lithia","Alafia","min_wq_1989_2012",20.6
-"True color Alafia R at Lithia","Alafia","max_wq_2010_2019",240
-"True color Alafia R at Lithia","Alafia","min_wq_2010_2019",15.6
-"True color Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",7.941
-"True color Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.679
-"True color Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",7.941
-"True color Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
-"True color Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
-"True color Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
-"True color Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
-"True color Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"True color Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"True color Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
-"True color Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
-"True color Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"True color Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",162.5
-"True color Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",4.2
-"True color Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",162.5
-"True color Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",3.9
-"True color Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"True color Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"True color Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.682
-"True color Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",27.31
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",11.4475
+"Temperature Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"Temperature Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"TOC Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"TOC Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"TOC Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"TOC Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"TOC Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"TOC Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"TOC Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"TOC Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"TOC Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",23.2
+"TOC Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",3
+"TOC Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"TOC Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
+"TOC Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
+"TOC Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
+"TOC Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
+"TOC Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
+"TOC Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"TOC Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
+"TOC Alafia R at Lithia","Alafia","max_flow_future",10.481
+"TOC Alafia R at Lithia","Alafia","min_flow_future",-8.082
+"TOC Alafia R at Lithia","Alafia","max_wq_2013_2022",25.3
+"TOC Alafia R at Lithia","Alafia","min_wq_2013_2022",0.175
+"TOC Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"TOC Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
+"TOC Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
+"TOC Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
+"TOC Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
+"TOC Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
+"TOC Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"TOC Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
+"TOC Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
+"TOC Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
+"TOC Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",38.8
+"TOC Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",1.6
+"TOC Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.682
+"TOC Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824
+"Turbidity Alafia R at Bell Shoals","Alafia","max_flow_1989_2100",10.481
+"Turbidity Alafia R at Bell Shoals","Alafia","min_flow_1989_2100",-8.082
+"Turbidity Alafia R at Bell Shoals","Alafia","max_flow_1989_2012",9.192
+"Turbidity Alafia R at Bell Shoals","Alafia","min_flow_1989_2012",1.411
+"Turbidity Alafia R at Bell Shoals","Alafia","max_flow_2013_2022",9.001
+"Turbidity Alafia R at Bell Shoals","Alafia","min_flow_2013_2022",2.213
+"Turbidity Alafia R at Bell Shoals","Alafia","max_flow_future",10.481
+"Turbidity Alafia R at Bell Shoals","Alafia","min_flow_future",-8.082
+"Turbidity Alafia R at Bell Shoals","Alafia","max_wq_2013_2022",48.2
+"Turbidity Alafia R at Bell Shoals","Alafia","min_wq_2013_2022",0.6
+"Turbidity Alafia R at Bell Shoals","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Turbidity Alafia R at Bell Shoals","Alafia","min_flow_obs_wq_2013_2022",2.76
 "Turbidity Alafia R at Lithia","Alafia","max_flow_1989_2100",10.481
 "Turbidity Alafia R at Lithia","Alafia","min_flow_1989_2100",-8.082
 "Turbidity Alafia R at Lithia","Alafia","max_flow_1989_2012",9.192
 "Turbidity Alafia R at Lithia","Alafia","min_flow_1989_2012",1.411
-"Turbidity Alafia R at Lithia","Alafia","max_flow_2010_2019",9.001
-"Turbidity Alafia R at Lithia","Alafia","min_flow_2010_2019",1.629
+"Turbidity Alafia R at Lithia","Alafia","max_flow_2013_2022",9.001
+"Turbidity Alafia R at Lithia","Alafia","min_flow_2013_2022",2.213
 "Turbidity Alafia R at Lithia","Alafia","max_flow_future",10.481
 "Turbidity Alafia R at Lithia","Alafia","min_flow_future",-8.082
-"Turbidity Alafia R at Lithia","Alafia","max_wq_1989_2012",45
-"Turbidity Alafia R at Lithia","Alafia","min_wq_1989_2012",0.35
-"Turbidity Alafia R at Lithia","Alafia","max_wq_2010_2019",30
-"Turbidity Alafia R at Lithia","Alafia","min_wq_2010_2019",0.5
-"Turbidity Alafia R at Lithia","Alafia","max_flow_obs_wq_1989_2012",8.436
-"Turbidity Alafia R at Lithia","Alafia","min_flow_obs_wq_1989_2012",1.504
-"Turbidity Alafia R at Lithia","Alafia","max_flow_obs_wq_2010_2019",8.132
-"Turbidity Alafia R at Lithia","Alafia","min_flow_obs_wq_2010_2019",1.679
+"Turbidity Alafia R at Lithia","Alafia","max_wq_2013_2022",45.9
+"Turbidity Alafia R at Lithia","Alafia","min_wq_2013_2022",0.65
+"Turbidity Alafia R at Lithia","Alafia","max_flow_obs_wq_2013_2022",8.132
+"Turbidity Alafia R at Lithia","Alafia","min_flow_obs_wq_2013_2022",2.588
 "Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2100",10.267
 "Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2100",-7.586
 "Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_1989_2012",8.65
 "Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_1989_2012",3.045
-"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_2010_2019",8.221
-"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_2010_2019",3.635
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_2013_2022",8.221
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_2013_2022",3.768
 "Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_future",10.267
 "Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_future",-7.586
-"Turbidity Hillsborough R at Morris Br","Hillsborough","max_wq_1989_2012",14.9
-"Turbidity Hillsborough R at Morris Br","Hillsborough","min_wq_1989_2012",0.8
-"Turbidity Hillsborough R at Morris Br","Hillsborough","max_wq_2010_2019",10.6
-"Turbidity Hillsborough R at Morris Br","Hillsborough","min_wq_2010_2019",0.8
-"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_1989_2012",7.215
-"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_1989_2012",3.52
-"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2010_2019",7.456
-"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2010_2019",3.809
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_wq_2013_2022",9.2
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_wq_2013_2022",1.1
+"Turbidity Hillsborough R at Morris Br","Hillsborough","max_flow_obs_wq_2013_2022",7.456
+"Turbidity Hillsborough R at Morris Br","Hillsborough","min_flow_obs_wq_2013_2022",3.824

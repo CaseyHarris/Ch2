@@ -1,0 +1,230 @@
+ANALYTE_NAME,total_meas,n_loc,use
+"Alkalinity, Carbonate as CaCO3",1,1,
+"BOD, carbonaceous",1,1,
+Flow (Daily Mean),2,1,discard
+Mercury,2,2,
+Molybdenum,6,2,
+Bolstar,8,1,discard
+"2,4-D",10,1,discard
+Acesulfame K,10,1,discard
+Acetamiprid,10,1,discard
+Afidopyropen,10,1,discard
+Aminomethylphosphonic acid,10,1,discard
+Bentazon,10,1,discard
+Benzovindiflupyr,10,1,discard
+Clothianidin,10,1,discard
+Dinotefuran,10,1,discard
+Endothall,10,1,discard
+Fenuron,10,1,discard
+Glufosinate,10,1,discard
+Glyphosate,10,1,discard
+Hydrocodone,10,1,discard
+Ibuprofen,10,1,discard
+Imazapyr,10,1,discard
+MCPP,10,1,discard
+Mandestrobin,10,1,discard
+Naproxen,10,1,discard
+Pyraclostrobin,10,1,discard
+Thiamethoxam,10,1,discard
+Tolfenpyrad,10,1,discard
+Triclopyr,10,1,discard
+Dichlorovos (DDVP),11,1,discard
+Dimethoate,11,1,discard
+Naled,11,1,discard
+Parathion,11,1,discard
+Phosdrin,11,1,discard
+Enterococci (MPN),14,1,
+Bromide,16,3,
+Flow,16,1,discard
+Color440F22,18,2,
+Fluridone,19,3,discard
+Aldrin,20,1,discard
+Atrazine,20,1,discard
+Azinphos-methyl,20,1,discard
+BHC-alpha,20,1,discard
+BHC-beta,20,1,discard
+BHC-delta,20,1,discard
+BHC-gamma (Lindane),20,1,discard
+"Chlordane, cis",20,1,discard
+"Chlordane, gamma",20,1,discard
+Chlorpyrifos-methyl,20,1,discard
+Coumaphos,20,1,discard
+"DDD, p,p'- ***retired*** (Use DDD)",20,1,discard
+"DDE, p,p'-, or 4,4'-DDE ***retired*** (use DDE)",20,1,discard
+"DDT, p,p'-, or 4,4'-DDT ***retired*** (use DDT)",20,1,discard
+Diazinon,20,1,discard
+Dieldrin,20,1,discard
+Disulfoton,20,1,discard
+Endosulfan Sulfate,20,1,discard
+"Endosulfan, alpha-",20,1,discard
+"Endosulfan, beta-",20,1,discard
+Endrin,20,1,discard
+Endrin Aldehyde,20,1,discard
+Endrin ketone,20,1,discard
+Ethion,20,1,discard
+Ethoprop,20,1,discard
+Fensulfothion,20,1,discard
+Fenthion,20,1,discard
+Heptachlor,20,1,discard
+Heptachlor epoxide,20,1,discard
+Malathion,20,1,discard
+Methoxychlor,20,1,discard
+Methyl parathion,20,1,discard
+Mirex,20,1,discard
+PCB-008,20,1,discard
+PCB-018,20,1,discard
+PCB-028,20,1,discard
+PCB-044,20,1,discard
+PCB-052,20,1,discard
+PCB-066,20,1,discard
+Pcb-101,20,1,discard
+Pcb-105,20,1,discard
+Pcb-118,20,1,discard
+Pcb-153,20,1,discard
+Pcb-170,20,1,discard
+Pcb-180,20,1,discard
+Pcb-195,20,1,discard
+Pcb-206,20,1,discard
+Phorate,20,1,discard
+Ronnel,20,1,discard
+Diuron,22,3,discard
+Imidacloprid,22,3,discard
+Lead,22,6,
+Linuron,22,3,discard
+Acetaminophen,23,3,discard
+Carbamazepine,23,3,discard
+Primidone,23,3,discard
+Sucralose,34,3,discard
+"Nitrogen, ammonia (NH3) as NH3",40,3,
+Phosphorus,48,1,
+Hardness- Calculated (CaCO3),50,1,
+Zinc,53,7,
+Methyl-t-butyl ether,56,2,discard
+Nitrogen ion (N),60,1,
+"Nitrogen, ammonia (NH3) + ammonium (NH4)",60,1,
+TotalDissolvedSolids,66,2,
+TotalSolids,66,2,
+"Hardness, Ca + Mg",67,3,
+Nickel,70,5,
+True Color,76,3,
+Aluminum,82,5,
+"Solids, Total Suspended (TSS)",88,2,
+Boron,97,4,
+Conductivity,97,2,
+Antimony,99,5,
+Silver,101,5,
+Selenium,113,5,
+Thallium,114,4,
+Uranium,115,3,
+Cadmium,120,5,
+Barium,124,4,
+Arsenic,125,5,
+Beryllium,127,5,
+Nitrate (N),131,3,
+Color- Apparent,133,3,
+Nitrite (N),133,3,
+Manganese,134,5,
+Iron,142,7,
+Apparent Color,147,4,
+Chromium,150,6,
+Copper,153,7,
+Nitrates,156,2,
+"Phosphorus, orthophosphate as P",167,4,
+Residues- Filterable (TDS),174,4,
+Alkalinity (CaCO3),178,4,
+Residues- Nonfilterable (TSS),179,4,
+Stream stage height,206,1,
+"BOD, Biochemical oxygen demand",207,3,
+Depth,215,4,
+"Alkalinity, Bicarbonate as CaCO3",222,5,
+Dissolved Solids,222,5,
+Total Organic Carbon (TOC),222,5,
+Total Suspended Solids (TSS),223,6,
+"Carbon, organic",260,3,
+Sodium,278,7,
+Sulfate,331,7,
+Color- True,335,6,
+FecalStrep,336,2,
+Calcium,348,10,
+Chlorophyll b,361,5,
+Chlorophyll c,362,5,
+Magnesium,399,10,
+Potassium,402,10,
+Chloride,405,9,
+Pheophytin a,407,6,
+Nitrate-Nitrite (N),411,6,
+Chlorophyll a- uncorrected,414,6,
+TotalSuspendedSolids,428,2,
+TotalColiform,434,2,
+"Nitrogen, mixed forms (NH3)+(NH4)+organic+(NO2)+(NO3)",438,3,
+Carbon- Organic,454,9,
+Chlorophyll (a+b+c),469,3,
+"Phosphorus, phosphate (PO4) as P",472,3,
+Chlorophyll-c,475,3,
+Chlorophyll a- corrected,476,8,
+Orthophosphate (P),489,8,
+"Nitrogen, organic",492,3,
+Chlorophyll-b,495,3,
+"Temperature, air",516,3,
+Nitrogen- Total Kjeldahl,528,9,
+Ammonia (N),533,9,
+"Color, True",536,3,
+Phosphorus- Total,545,9,
+"Chlorophyll a, uncorrected for pheophytin",596,6,
+"Nitrogen, ammonia as N",614,6,
+"Chlorophyll a, corrected for pheophytin",658,8,
+Pheophytin-a,671,8,
+Phosphorus as P,693,8,
+"Nitrogen, Kjeldahl",713,8,
+"Sulfur, sulfate (SO4) as SO4",739,8,
+"Nitrogen, Nitrite (NO2) + Nitrate (NO3) as N",740,8,
+Fluorides,742,8,
+BOD,765,2,
+Color345F45,823,2,
+"Depth, bottom",834,8,
+Color345C,854,2,
+TOCL,920,2,
+Sulfatesmodified,979,2,
+Dissolved oxygen saturation,990,3,
+ChlorophyllaCorr,1197,2,
+Chlorophyllpheo,1249,2,
+Chlorophyllt,1476,2,
+Chlorophylla,1486,2,
+Chlorophyllc,1509,2,
+Chlorophyllb,1510,2,
+Dissolved oxygen (DO),1518,9,
+"Temperature, water",1519,9,
+OrthoPhosphates,1543,2,
+TotalNitrogen,1550,2,
+NitratesNitrites,1588,2,
+OrganicNitrogen,1607,2,
+KjeldahlNitrogen,1669,2,
+Ammonia,1679,2,
+Specific conductance,1733,9,
+TotalPhosphorus,1745,2,
+Dissolved Oxygen Saturation,1834,11,
+DOpT,1929,2,
+DOpB,1934,2,
+Dissolved Oxygen,1963,14,
+"Temperature, Water",1965,14,
+Specific Conductance,2015,14,
+SalT,2087,2,
+SalB,2090,2,
+Fluoride,2138,11,
+pHT,2165,2,
+pHB,2166,2,
+CondT,2168,2,
+DOB,2168,2,
+CondB,2169,2,
+DOT,2170,2,
+TempWaterT,2170,2,
+TempWaterB,2171,2,
+Salinity,2266,11,
+DOpM,2269,2,
+SalM,2637,2,
+TempWaterM,2667,2,
+pHM,2676,2,
+DOM,2706,2,
+CondM,2716,2,
+Turbidity,2921,17,
+pH,3475,20,
